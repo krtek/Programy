@@ -8,7 +8,8 @@ import java.util.List;
  * Time: 11:47
  */
 public class Action {
-    public String id;
+
+	public String id;
     public String name;
     public String description;
     public String imageUrl;
@@ -16,7 +17,7 @@ public class Action {
     public String locationLat;
     public String locationLong;
 
-    public List<Stages> stages;
+    public List<Stage> stages;
 
     @Override
     public String toString() {

@@ -7,7 +7,7 @@ import java.util.List;
  * Date: 22.5.11
  * Time: 11:48
  */
-public class Stages {
+public class Stage {
     public String name;
     public String desc;
     public List<StageEvent> events;
