@@ -21,19 +21,24 @@ public class StageActivity extends ListActivity {
 	
 	
 	List<StageEvent> list;
+	Stage stage;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 
+		setContentView(R.layout.stage_detail);
+		
 		Intent i = getIntent();
 		i.getExtras().getInt(ActionProvider.ACTION_ID);
 
-		Stage stage = ProviderFactory.getProvider().getStages(
+		this.stage = ProviderFactory.getProvider().getStages(
 				i.getExtras().getInt(ActionProvider.ACTION_ID),
 				i.getExtras().getInt(ActionProvider.STAGE_ID));
 
 		this.list = stage.events;		
+		
+		((TextView)findViewById(R.id.stageDescription)).setText(stage.desc);
 		
 		final LayoutInflater inflater = getLayoutInflater();
 
