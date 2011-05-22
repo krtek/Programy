@@ -1,11 +1,14 @@
 package cz.hackathon.programy;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cz.hackathon.programy.dto.Action;
@@ -39,11 +42,16 @@ public class ActionActivity extends Activity {
         Intent i = getIntent();
         int actionId = i.getIntExtra(ActionProvider.ACTION_ID, 0);
 
-        Action a = ProviderFactory.getProvider().getAction(actionId);
+        final Action a = ProviderFactory.getProvider().getAction(actionId);
         ((TextView) findViewById(R.id.action_name)).setText(a.name);
         ((TextView) findViewById(R.id.action_description)).setText(a.description);
         ((TextView) findViewById(R.id.action_url)).setText(a.webUrl);
-        ((TextView) findViewById(R.id.action_location)).setText(a.locationLat + "," + a.locationLong);
+        ((Button) findViewById(R.id.action_location)).setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                String uri = "geo:"+ a.locationLat + "," + a.locationLong;
+                startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
+            }
+        });
         if (a.imageUrl != null) {
             HttpClient httpClient = new DefaultHttpClient();
             Log.d(ActionActivity.class.getName(), "Loading image from: " + a.imageUrl);

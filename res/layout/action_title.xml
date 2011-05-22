@@ -14,7 +14,7 @@
                   android:orientation="vertical">
         <TextView android:layout_width="wrap_content" android:text="URL" android:id="@+id/action_url"
                   android:layout_height="wrap_content"></TextView>
-        <TextView android:layout_width="wrap_content" android:text="Location" android:id="@+id/action_location"
-                  android:layout_height="wrap_content"></TextView>
+        <Button android:layout_width="wrap_content" android:text="Mapka" android:id="@+id/action_location"
+                  android:layout_height="wrap_content"></Button>
     </LinearLayout>
 </RelativeLayout>

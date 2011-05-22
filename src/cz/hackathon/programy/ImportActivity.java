@@ -1,5 +1,7 @@
 package cz.hackathon.programy;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -10,8 +12,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.provider.ActionProvider;
-import cz.hackathon.programy.provider.ProviderFactory;
+import cz.hackathon.programy.provider.XmlActionProvider;
 
 /**
  * Importuje akce z XML souboru
@@ -24,10 +27,12 @@ public class ImportActivity extends Activity implements OnCancelListener {
 	private ImportThread importThread;
 	private ProgressDialog progressDialog;
 	private Resources res;
+	private XmlActionProvider provider;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		provider = ((FestivalyApplication)getApplication()).provider;
 		handler = new Handler();
 		res = getResources();
 
@@ -76,7 +81,7 @@ public class ImportActivity extends Activity implements OnCancelListener {
 		
 		@Override
 		public void run() {
-			ActionProvider  provider = ProviderFactory.getProvider();
+			//ActionProvider  provider = ProviderFactory.getProvider();
 			provider.addXml(url);
 			
 			handler.post(new Runnable() {
@@ -84,7 +89,7 @@ public class ImportActivity extends Activity implements OnCancelListener {
 					progressDialog.dismiss();
 					
 					// TODO switch to Festivals
-					final Intent intent = new Intent(ImportActivity.this, FestTabActivity.class);
+					final Intent intent = new Intent(ImportActivity.this, ListActionActivity.class);
 					startActivity(intent);
 					
 					finish();

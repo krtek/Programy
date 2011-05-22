@@ -5,8 +5,7 @@
       android:versionName="1.0">
 <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
-
-    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:name="FestivalyApplication">
         <activity android:name="ListActionActivity"
                   android:label="@string/app_name">
             <intent-filter>
