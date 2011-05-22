@@ -6,4 +6,16 @@ package cz.hackathon.programy.dto;
  * Time: 11:49
  */
 public class StageEvent {
+    public String name;
+    public String from;
+    public String to;
+
+    @Override
+    public String toString() {
+        return "StageEvent{" +
+                "name='" + name + '\'' +
+                ", from='" + from + '\'' +
+                ", to='" + to + '\'' +
+                '}';
+    }
 }
