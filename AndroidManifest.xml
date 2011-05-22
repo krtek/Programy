@@ -17,16 +17,6 @@
   		<activity android:name="StageActivity" android:configChanges="keyboardHidden|orientation"/>
         <activity android:name="FestTabActivity" android:configChanges="keyboardHidden|orientation"/>
         <activity android:name="ActionActivity" android:configChanges="keyboardHidden|orientation">
-              <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="ListActionActivity" android:configChanges="keyboardHidden|orientation">
-              <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
   		<activity android:name="ImportActivity" android:configChanges="keyboardHidden|orientation">
   			<intent-filter>

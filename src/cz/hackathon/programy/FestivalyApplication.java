@@ -30,7 +30,7 @@ public class FestivalyApplication extends Application {
 		}
 		
         File directory = getDir("data", Context.MODE_PRIVATE);
-        String fileName = directory.getAbsolutePath()+"/test-android.neodatis6";
+        String fileName = directory.getAbsolutePath()+"/test-android.neodatis8";
 
         // Opens the NeoDatis database
         odb = ODBFactory.open(fileName);

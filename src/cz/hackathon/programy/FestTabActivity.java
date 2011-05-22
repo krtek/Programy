@@ -48,7 +48,7 @@ public class FestTabActivity extends TabActivity {
 			intent = new Intent().setClass(this, StageActivity.class);
 			 intent.putExtra(ActionProvider.ACTION_ID, actionId);
 			 intent.putExtra(ActionProvider.STAGE_ID, stageId);
-			spec = tabHost.newTabSpec("artists").
+			spec = tabHost.newTabSpec("artists"+stageId).
 			setIndicator(stage.name, res.getDrawable(android.R.drawable.ic_lock_silent_mode_off)).setContent(intent);
 			tabHost.addTab(spec);
 			stageId++;
