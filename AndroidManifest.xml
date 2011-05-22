@@ -15,14 +15,6 @@
             </intent-filter>
         </activity>
 
-<<<<<<< HEAD
-		<activity android:name="ActionActivity"></activity>
-  		<activity android:name="FestTabActivity"></activity>
-  		<activity android:name="StageActivity"></activity>
-=======
-  		<activity android:name="FestTabActivity"/>
->>>>>>> 2d3d49c47d0c7eb00cd693ee54d70154c943b494
-
   		<activity android:name="StageActivity"/>
         <activity android:name="ActionActivity">
               <intent-filter>
