@@ -22,8 +22,9 @@ public class FakeProvider implements ActionProvider {
         a1.name = "Sázava Fest - pátek";
         a1.description = "Už 10 let pro Vás připravujeme Sázavafest. Festival zasazený do romantické přírody posázaví, který je dnes už tradicí. A to především díky Vám, věrným fanouškům a návštěvníkům!";
         a1.imageUrl = "http://www.sazavafest.cz/sites/default/files/hp-vizual.jpg";
-        a1.locationLat = "?";
-        a1.locationLong = "?";
+        a1.webUrl = "http://sazavafest.cz";
+        a1.locationLat = "12345";
+        a1.locationLong = "78905";
         a1.stages = new ArrayList<Stage>();
         Stage s1 = new Stage();
         s1.name = "Stage1";

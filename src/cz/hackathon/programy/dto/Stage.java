@@ -1,5 +1,6 @@
 package cz.hackathon.programy.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
 public class Stage {
     public String name;
     public String desc;
-    public List<StageEvent> events;
+    public List<StageEvent> events = new ArrayList<StageEvent>();
 
     @Override
     public String toString() {
