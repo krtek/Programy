@@ -10,6 +10,16 @@ public class StageEvent {
     public String from;
     public String to;
 
+    public StageEvent(String name, String from, String to) {
+        this.name = name;
+        this.from = from;
+        this.to = to;
+    }
+
+    public StageEvent() {
+
+    }
+
     @Override
     public String toString() {
         return "StageEvent{" +

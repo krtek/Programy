@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Titulka akce -->
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <TextView android:layout_height="wrap_content" android:text="Sázava Fest" android:layout_alignParentTop="true" android:id="@+id/action_name" android:layout_width="fill_parent" android:textSize="15dip"></TextView>
+</RelativeLayout>
