@@ -7,6 +7,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -31,9 +32,11 @@ public class DomParser extends BaseFeedParser {
 	final static String STAGES = "stages";
 	final static String EVENT = "event";
 	final static String EVENTS = "events";
+	final static String FROM = "FROM";
+	final static String TO = "to";
 	
 
-    protected DomParser(String feedUrl) {
+    public DomParser(String feedUrl) {
         super(feedUrl);
     }
 
@@ -52,35 +55,53 @@ public class DomParser extends BaseFeedParser {
                 for (int j=0;j<properties.getLength();j++){
                     Node property = properties.item(j);
                     String name = property.getNodeName();
-                    if (name.equalsIgnoreCase(ID)){
+                    if (name.equalsIgnoreCase(ID) && property.getFirstChild() != null){
                     	action.id = (property.getFirstChild().getNodeValue());
-                    } else if (name.equalsIgnoreCase(NAME)){
+                    } else if (name.equalsIgnoreCase(NAME) && property.getFirstChild() != null){
                     	action.name = (property.getFirstChild().getNodeValue());
-                    } else if (name.equalsIgnoreCase(DESCRIPTION)){
+                    } else if (name.equalsIgnoreCase(DESCRIPTION) && property.getFirstChild() != null){
                         action.description = property.getFirstChild().getNodeValue();
-                    } else if (name.equalsIgnoreCase(IMAGE)){
+                    } else if (name.equalsIgnoreCase(IMAGE) && property.getFirstChild() != null){
                         action.imageUrl = property.getFirstChild().getNodeValue();
-                    } else if (name.equalsIgnoreCase(STAGES)){
-                    	List<Stage> stages = new ArrayList<Stage> ();
-                    	NodeList stagesNodes = item.getChildNodes();
-                        for (int k=0;i<items.getLength();k++){
+                    } else if (name.equalsIgnoreCase(STAGES) && property.getFirstChild() != null){
+                    	action.stages = new ArrayList<Stage> ();
+                        NodeList stagesNodes = ((Element) property).getElementsByTagName(STAGE);
+                        for (int k=0;k<stagesNodes.getLength();k++){
                         	
                             Stage stage = new Stage();
-                            Node stageItem = items.item(k);
-                            NodeList stageProperties = item.getChildNodes();
-                            for (int l=0;j<properties.getLength();l++){
-                                Node stageProperty = properties.item(l);
-                                String stageName = property.getNodeName();
-                                if (name.equalsIgnoreCase(NAME)){
-                                	stage.name = (property.getFirstChild().getNodeValue());
-                                } else if (name.equalsIgnoreCase(DESCRIPTION)){
-                                	stage.desc = property.getFirstChild().getNodeValue();
-                                } else if (name.equalsIgnoreCase(EVENTS)){
-                                	List<StageEvent> stageEvents = new ArrayList<StageEvent> ();
-                                	NodeList stageEventNodes = item.getChildNodes();
+                            Node stageItem = stagesNodes.item(k);
+                            NodeList stageProperties = stageItem.getChildNodes();
+                            for (int l=0;l<stageProperties.getLength();l++){
+                                Node stageProperty = stageProperties.item(l);
+                                String stageName = stageProperty.getNodeName();
+                                if (stageName.equalsIgnoreCase(NAME) && stageProperty.getFirstChild() != null){
+                                	stage.name = stageProperty.getFirstChild().getNodeValue();
+                                } else if (stageName.equalsIgnoreCase(DESCRIPTION) && stageProperty.getFirstChild() != null){
+                                	stage.desc = stageProperty.getFirstChild().getNodeValue();
+                                } else if (stageName.equalsIgnoreCase(EVENTS) && stageProperty.getFirstChild() != null){
+                                	stage.events = new ArrayList<StageEvent> ();
+                                    NodeList eventsNodes = ((Element) property).getElementsByTagName(EVENT);
+                                    for (int m=0;m<eventsNodes.getLength();m++){
+                                    	
+                                        StageEvent event = new StageEvent();
+                                        Node eventItem = eventsNodes.item(m);
+                                        NodeList eventProperties = eventItem.getChildNodes();
+                                        for (int n=0;n<eventProperties.getLength();n++){
+                                            Node eventProperty = eventProperties.item(n);
+                                            String eventName = eventProperty.getNodeName();
+                                            if (eventName.equalsIgnoreCase(NAME) && eventProperty.getFirstChild() != null){
+                                            	event.name = eventProperty.getFirstChild().getNodeValue();
+                                            } else if (eventName.equalsIgnoreCase(FROM) && eventProperty.getFirstChild() != null){
+                                            	event.from = eventProperty.getFirstChild().getNodeValue();
+                                            } else if (eventName.equalsIgnoreCase(TO) && eventProperty.getFirstChild() != null){
+                                            	event.to = eventProperty.getFirstChild().getNodeValue();
+                                            }
+                                        }
+                                        stage.events.add(event);
+                                  }
                                 }
                             }
-                            actions.add(action);
+                            action.stages.add(stage);
                         }
 
                     	

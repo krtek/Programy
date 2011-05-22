@@ -1,9 +1,9 @@
 package cz.hackathon.programy.provider;
 
+import java.util.List;
+
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.dto.Stage;
-
-import java.util.List;
 
 /**
  * User: lukas.marek@cleverlance.com
