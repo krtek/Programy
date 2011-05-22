@@ -14,5 +14,8 @@
             </intent-filter>
         </activity>
 
+  		<activity android:name="FestTabActivity"/>
+  		<activity android:name="StageActivity"></activity>
+
     </application>
 </manifest>
