@@ -1,5 +1,6 @@
 package cz.hackathon.programy.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,7 +17,7 @@ public class Action {
     public String locationLat;
     public String locationLong;
 
-    public List<Stages> stages;
+    public List<Stages> stages = new ArrayList<Stages>();
 
     @Override
     public String toString() {

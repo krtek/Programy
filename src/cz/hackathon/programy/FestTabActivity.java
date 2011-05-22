@@ -5,6 +5,10 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.TabHost;
+import cz.hackathon.programy.dto.Action;
+import cz.hackathon.programy.dto.Stages;
+import cz.hackathon.programy.provider.ActionProvider;
+import cz.hackathon.programy.provider.ProviderFactory;
 
 public class FestTabActivity extends TabActivity {
 
@@ -13,19 +17,39 @@ public class FestTabActivity extends TabActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.festtabs); 
+        
+        Intent i = getIntent();
 
+        ActionProvider data = ProviderFactory.getProvider();
+        				
+		int actionId = i.getExtras().getInt(ActionProvider.ACTION_ID);
+				
+		Action action = data.getAction(actionId);
+		
 		Resources res = getResources(); // Resource object to get Drawables
 		TabHost tabHost = getTabHost(); // The activity TabHost
 		TabHost.TabSpec spec; // Resusable TabSpec for each tab
-		Intent intent; // Reusable Intent for each tab
-
-		// Create an Intent to launch an Activity for the tab (to be reused)
-		intent = new Intent().setClass(this, StageActivity.class);
-
-		for (int i = 0; i < 5; i++) {
+		Intent intent; // Reusable Intent for each tab		
+		
+		{
+			// // Do the same for the other tabs
+			 intent = new Intent().setClass(this, ActionActivity.class);
+			 intent.putExtra(ActionProvider.ACTION_ID, actionId);
+			 spec = tabHost.newTabSpec("albums").setIndicator("Detail")
+			 .setContent(intent);
+			 tabHost.addTab(spec);
+		}
+		
+		int stageId = 0;
+		for (Stages stage : action.stages) {			
 			// Initialize a TabSpec for each tab and add it to the TabHost
-			spec = tabHost.newTabSpec("artists").setIndicator("Stage"+i).setContent(intent);
+			// Create an Intent to launch an Activity for the tab (to be reused)
+			intent = new Intent().setClass(this, StageActivity.class);
+			 intent.putExtra(ActionProvider.ACTION_ID, actionId);
+			 intent.putExtra(ActionProvider.STAGE_ID, stageId);
+			spec = tabHost.newTabSpec("artists").setIndicator(stage.name).setContent(intent);
 			tabHost.addTab(spec);
+			stageId++;
 		}
 		// // Do the same for the other tabs
 		// intent = new Intent().setClass(this, AlbumsActivity.class);
