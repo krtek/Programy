@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<actions>
+<!--
+	<action>
+		<id></id>
+		<name></name>
+		<description></description>
+		<image></image>
+		<lat></lat>
+		<lon></lon>
+		<date></date>
+		<stages>
+			<stage>
+				<id></id>
+				<name></name>
+				<description></description>
+				<events>
+					<event>
+						<name></name>
+						<from></from>
+						<to></to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+-->
+	<action>
+		<id>1</id>
+		<name>České hrady - Rožmberk nad Vltavou</name>
+		<description></description>
+		<image></image>
+		<lat></lat>
+		<lon></lon>
+		<date>8.7.2011</date>
+		<stages>
+			<stage>
+				<id>1</id>
+				<name>Program</name>
+				<description></description>
+				<events>
+					<event>
+						<name>JIŘÍ SCHMITZER</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>TATABOJS</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>TOMÁŠ KLUS</name>
+						<from></from>
+						<to></to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+</actions>
