@@ -4,5 +4,5 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nadpis" android:id="@+id/textView1" android:layout_alignParentTop="true"></TextView>
-    <ListView android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/list" android:layout_below="@+id/textView1" android:layout_alignLeft="@+id/textView1" android:layout_alignRight="@+id/textView1"></ListView>
+    <ListView android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/list" android:layout_below="@+id/textView1" android:layout_alignLeft="@+id/textView1"></ListView>
 </RelativeLayout>

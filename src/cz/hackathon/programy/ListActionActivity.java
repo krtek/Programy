@@ -2,14 +2,17 @@ package cz.hackathon.programy;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import cz.hackathon.programy.dto.Action;
+import cz.hackathon.programy.provider.ActionProvider;
 import cz.hackathon.programy.provider.ProviderFactory;
 
 import java.util.List;
@@ -32,6 +35,14 @@ public class ListActionActivity extends Activity {
 
         ListView list = (ListView) findViewById(R.id.list);
         list.setAdapter(new ActionAdapter(ProviderFactory.getProvider().getAvailableActions(), this));
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setClass(getBaseContext(), FestTabActivity.class);
+                intent.putExtra(ActionProvider.ACTION_ID, i);
+                startActivity(intent);
+            }
+        });
     }
 }
 
