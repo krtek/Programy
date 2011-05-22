@@ -89,7 +89,7 @@ public class ImportActivity extends Activity implements OnCancelListener {
 					progressDialog.dismiss();
 					
 					// TODO switch to Festivals
-					final Intent intent = new Intent(ImportActivity.this, FestTabActivity.class);
+					final Intent intent = new Intent(ImportActivity.this, ListActionActivity.class);
 					startActivity(intent);
 					
 					finish();
