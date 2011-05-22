@@ -7,28 +7,28 @@
 
     <application android:icon="@drawable/icon" android:label="@string/app_name" android:name="FestivalyApplication">
         <activity android:name="ListActionActivity"
-                  android:label="@string/app_name">
+                  android:label="@string/app_name" android:configChanges="keyboardHidden|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-  		<activity android:name="StageActivity"/>
-        <activity android:name="FestTabActivity"/>
-        <activity android:name="ActionActivity">
+  		<activity android:name="StageActivity" android:configChanges="keyboardHidden|orientation"/>
+        <activity android:name="FestTabActivity" android:configChanges="keyboardHidden|orientation"/>
+        <activity android:name="ActionActivity" android:configChanges="keyboardHidden|orientation">
               <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ListActionActivity">
+        <activity android:name="ListActionActivity" android:configChanges="keyboardHidden|orientation">
               <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-  		<activity android:name="ImportActivity">
+  		<activity android:name="ImportActivity" android:configChanges="keyboardHidden|orientation">
   			<intent-filter>
             	<action android:name="android.intent.action.VIEW" />
       			<category android:name="android.intent.category.DEFAULT" />
