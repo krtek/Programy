@@ -1,5 +1,6 @@
 package cz.hackathon.programy.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,10 +8,10 @@ import java.util.List;
  * Date: 22.5.11
  * Time: 11:48
  */
-public class Stages {
+public class Stage {
     public String name;
     public String desc;
-    public List<StageEvent> events;
+    public List<StageEvent> events = new ArrayList<StageEvent>();
 
     @Override
     public String toString() {

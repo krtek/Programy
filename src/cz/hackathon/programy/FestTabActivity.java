@@ -6,7 +6,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.TabHost;
 import cz.hackathon.programy.dto.Action;
-import cz.hackathon.programy.dto.Stages;
+import cz.hackathon.programy.dto.Stage;
 import cz.hackathon.programy.provider.ActionProvider;
 import cz.hackathon.programy.provider.ProviderFactory;
 
@@ -41,7 +41,7 @@ public class FestTabActivity extends TabActivity {
 		}
 		
 		int stageId = 0;
-		for (Stages stage : action.stages) {			
+		for (Stage stage : action.stages) {			
 			// Initialize a TabSpec for each tab and add it to the TabHost
 			// Create an Intent to launch an Activity for the tab (to be reused)
 			intent = new Intent().setClass(this, StageActivity.class);
