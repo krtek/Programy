@@ -30,7 +30,8 @@ public class FestivalyApplication extends Application {
 		}
 		
         File directory = getDir("data", Context.MODE_PRIVATE);
-        String fileName = directory.getAbsolutePath()+"/test-android.neodatis8";
+
+        String fileName = directory.getAbsolutePath()+"/test-android.neodatis7";
 
         // Opens the NeoDatis database
         odb = ODBFactory.open(fileName);
@@ -38,6 +39,11 @@ public class FestivalyApplication extends Application {
         provider = new XmlActionProvider();
         provider.odb = odb;
         
+	}
+	
+	@Override
+	public void onTerminate() {
+		odb.close();
 	}
 
 }

@@ -16,21 +16,21 @@ public class FestTabActivity extends TabActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-        setContentView(R.layout.festtabs); 
-        
+        setContentView(R.layout.festtabs);
+
         Intent i = getIntent();
 
         ActionProvider data = ProviderFactory.getProvider(this);
-        				
+
 		int actionId = i.getExtras().getInt(ActionProvider.ACTION_ID);
-				
+
 		Action action = data.getAction(actionId);
-		
+
 		Resources res = getResources(); // Resource object to get Drawables
 		TabHost tabHost = getTabHost(); // The activity TabHost
 		TabHost.TabSpec spec; // Resusable TabSpec for each tab
-		Intent intent; // Reusable Intent for each tab		
-		
+		Intent intent; // Reusable Intent for each tab
+
 		{
 			// // Do the same for the other tabs
 			 intent = new Intent().setClass(this, ActionActivity.class);
@@ -40,9 +40,9 @@ public class FestTabActivity extends TabActivity {
 			 .setContent(intent);
 			 tabHost.addTab(spec);
 		}
-		
+
 		int stageId = 0;
-		for (Stage stage : action.stages) {			
+		for (Stage stage : action.stages) {
 			// Initialize a TabSpec for each tab and add it to the TabHost
 			// Create an Intent to launch an Activity for the tab (to be reused)
 			intent = new Intent().setClass(this, StageActivity.class);
@@ -52,6 +52,7 @@ public class FestTabActivity extends TabActivity {
 			setIndicator(stage.name, res.getDrawable(android.R.drawable.ic_lock_silent_mode_off)).setContent(intent);
 			tabHost.addTab(spec);
 			stageId++;
+
 		}
 		// // Do the same for the other tabs
 		// intent = new Intent().setClass(this, AlbumsActivity.class);
