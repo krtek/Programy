@@ -35,7 +35,8 @@ public class FestTabActivity extends TabActivity {
 			// // Do the same for the other tabs
 			 intent = new Intent().setClass(this, ActionActivity.class);
 			 intent.putExtra(ActionProvider.ACTION_ID, actionId);
-			 spec = tabHost.newTabSpec("albums").setIndicator("Detail")
+			 spec = tabHost.newTabSpec("albums").
+			 setIndicator("Detail", res.getDrawable(android.R.drawable.ic_menu_gallery))
 			 .setContent(intent);
 			 tabHost.addTab(spec);
 		}
@@ -47,7 +48,8 @@ public class FestTabActivity extends TabActivity {
 			intent = new Intent().setClass(this, StageActivity.class);
 			 intent.putExtra(ActionProvider.ACTION_ID, actionId);
 			 intent.putExtra(ActionProvider.STAGE_ID, stageId);
-			spec = tabHost.newTabSpec("artists").setIndicator(stage.name).setContent(intent);
+			spec = tabHost.newTabSpec("artists").
+			setIndicator(stage.name, res.getDrawable(android.R.drawable.ic_lock_silent_mode_off)).setContent(intent);
 			tabHost.addTab(spec);
 			stageId++;
 		}

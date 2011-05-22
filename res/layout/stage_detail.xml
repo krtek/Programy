@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="fill_parent"
-  android:layout_height="wrap_content" android:orientation="vertical">
-    <LinearLayout android:layout_height="fill_parent" android:id="@+id/linearLayout1" android:layout_width="wrap_content">
-        <TextView android:text="TextView" android:id="@+id/stageDescription" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
-    </LinearLayout>
-    <ListView android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@android:id/list"></ListView>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical">
+    <RelativeLayout android:id="@+id/relativeLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/stageDescription"></TextView>
+    </RelativeLayout>
+	<ListView android:id="@android:id/list" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"></ListView>
 </LinearLayout>
