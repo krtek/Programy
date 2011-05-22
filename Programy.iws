@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c5673ce-35e5-4d12-8270-c0de1d2069ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programy.iws" afterPath="$PROJECT_DIR$/Programy.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/dto/Action.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/dto/Action.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/dto/StageEvent.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/dto/StageEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/dto/Stages.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/dto/Stages.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/res/layout/festival_title.xml" afterPath="$PROJECT_DIR$/res/layout/actions.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/res/layout/festivals.xml" afterPath="$PROJECT_DIR$/res/layout/action_title.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/res/layout/festivals_row.xml" afterPath="$PROJECT_DIR$/res/layout/action_row.xml" />
     </list>
     <ignored path="Programy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,9 +59,7 @@
     <ui_properties />
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="Programy">
-      <favorite_root url="file://$PROJECT_DIR$/res/layout/festival.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-    </favorites_list>
+    <favorites_list name="Programy" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -75,8 +72,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="festivals.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/festivals.xml">
+      <file leaf-file-name="actions.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/actions.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="51" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
               <folding />
@@ -84,10 +81,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Action.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Action.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/dto/Action.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="18" selection-start="419" selection-end="419" vertical-scroll-proportion="0.42904842">
+            <state line="24" column="3" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="action_title.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/action_title.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.062176164">
               <folding />
             </state>
           </provider>
@@ -105,7 +111,16 @@
       <file leaf-file-name="Stages.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/dto/Stages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="18" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
+            <state line="12" column="35" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stage.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/stage.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,6 +154,7 @@
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/dto/Stages.java" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/dto/Action.java" />
         <option value="$PROJECT_DIR$/res/layout/festival.xml" />
+        <option value="$PROJECT_DIR$/res/layout/festival_title.xml" />
       </list>
     </option>
   </component>
@@ -189,6 +205,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Programy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="programy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="programy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dto" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -433,7 +489,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/festivals.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/actions.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="51" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
           <folding />
@@ -447,13 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/dto/Stages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/festtabs.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -463,7 +512,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/dto/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="18" selection-start="419" selection-end="419" vertical-scroll-proportion="0.42904842">
+        <state line="24" column="3" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/dto/Stages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="35" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/stage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/action_title.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.062176164">
           <folding />
         </state>
       </provider>
