@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,30 +23,35 @@ public class ImportActivity extends Activity implements OnCancelListener {
 	private Handler  handler;
 	private ImportThread importThread;
 	private ProgressDialog progressDialog;
+	private Resources res;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-
 		super.onCreate(savedInstanceState);
+		handler = new Handler();
+		res = getResources();
 
 		Intent intent = getIntent();
 		// check if this intent is started via custom scheme link
 		if (Intent.ACTION_VIEW.equals(intent.getAction())) {
 			Uri uri = intent.getData();
-			Log.i(TAG, "Importing: " + uri.toString() + ".xml");
+			
+			String url = uri.toString() + ".xml";
+			
+			
+			Log.i(TAG, "Importing: " + url);
 
-			importXml(uri.toString() + ".xml");
+			importXml(url);
 		} else {
 			finish();
 		}
 	}
 	
 	private void importXml(String url) {
-		handler = new Handler();
 		if (importThread != null && importThread.isAlive())
 			return;
 		
-		progressDialog = ProgressDialog.show(this, null, getResources().getString(R.string.import_message), false, true, this);
+		progressDialog = ProgressDialog.show(this, null, res.getString(R.string.import_message), true, true, this);
 		
 		importThread = new ImportThread(url);
 		importThread.start();
@@ -53,9 +59,9 @@ public class ImportActivity extends Activity implements OnCancelListener {
 	}
 	
 	public void onCancel(DialogInterface dialog) {
-		dialog.dismiss();
 		handler.post(new Runnable() {
 			public void run() {
+				progressDialog.dismiss();
 				finish();
 			}
 		});
