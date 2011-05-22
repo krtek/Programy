@@ -2,13 +2,22 @@ package cz.hackathon.programy;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.provider.ActionProvider;
 import cz.hackathon.programy.provider.ProviderFactory;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * User: lukas.marek@cleverlance.com
@@ -30,14 +39,26 @@ public class ActionActivity extends Activity {
         Intent i = getIntent();
         int actionId = i.getIntExtra(ActionProvider.ACTION_ID, 0);
 
-
         Action a = ProviderFactory.getProvider().getAction(actionId);
-        ((TextView)findViewById(R.id.action_name)).setText(a.name);
-        ((TextView)findViewById(R.id.action_description)).setText(a.description);
-        ((TextView)findViewById(R.id.action_url)).setText(a.webUrl);
-        ((TextView)findViewById(R.id.action_location)).setText(a.locationLat + "," + a.locationLong);
+        ((TextView) findViewById(R.id.action_name)).setText(a.name);
+        ((TextView) findViewById(R.id.action_description)).setText(a.description);
+        ((TextView) findViewById(R.id.action_url)).setText(a.webUrl);
+        ((TextView) findViewById(R.id.action_location)).setText(a.locationLat + "," + a.locationLong);
         if (a.imageUrl != null) {
-            ((ImageView)findViewById(R.id.imageView1)).setImageURI(Uri.parse(a.imageUrl));
+            HttpClient httpClient = new DefaultHttpClient();
+            Log.d(ActionActivity.class.getName(), "Loading image from: " + a.imageUrl);
+            HttpGet httpGet = new HttpGet(a.imageUrl);
+            HttpResponse response = null;
+            try {
+                response = httpClient.execute(httpGet);
+                InputStream content = response.getEntity().getContent();
+                Drawable d = Drawable.createFromStream(content, "src");
+                ((ImageView) findViewById(R.id.imageView1)).setImageDrawable(d);
+                content.close();
+                httpGet.abort();
+            } catch (IOException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
         }
 
     }
