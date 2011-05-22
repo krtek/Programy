@@ -28,10 +28,10 @@
 	<action>
 		<id>1</id>
 		<name>České hrady - Rožmberk nad Vltavou</name>
-		<description></description>
-		<image></image>
-		<lat></lat>
-		<lon></lon>
+		<description>V nejjižnějším cípu Čech na vysokém a zalesněném ostrohu, který obtéká řeka Vltava, stojí hrad Rožmberk. Jeho dnešní rozloha i vzhled jsou výsledkem několika stavebních etap různých slohových fází....</description>
+		<image>http://www.ceskehrady.cz/files/ch/text/rozmberk_podium_ram.gif</image>
+		<lat>48.65611</lat>
+		<lon>14.36521</lon>
 		<date>8.7.2011</date>
 		<stages>
 			<stage>
@@ -51,6 +51,94 @@
 					</event>
 					<event>
 						<name>TOMÁŠ KLUS</name>
+						<from></from>
+						<to></to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+	<action>
+		<id>2</id>
+		<name>České hrady - Rožmberk nad Vltavou</name>
+		<description>V nejjižnějším cípu Čech na vysokém a zalesněném ostrohu, který obtéká řeka Vltava, stojí hrad Rožmberk. Jeho dnešní rozloha i vzhled jsou výsledkem několika stavebních etap různých slohových fází....</description>
+		<image>http://www.ceskehrady.cz/files/ch/text/rozmberk_podium_ram.gif</image>
+		<lat>48.65611</lat>
+		<lon>14.36521</lon>
+		<date>9.7.2011</date>
+		<stages>
+			<stage>
+				<id>1</id>
+				<name>Program</name>
+				<description></description>
+				<events>
+					<event>
+						<name>DIVOKEJ BILL</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>KAŠPÁREK V ROHLÍKU</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>KRYŠTOF</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>MOTHER'S ANGELS</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>PLEXIS</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>PRAGUE CONSPIRACY</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>QUEENS OF EVERYTHING</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>SKYLINE</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>SUNSHINE</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>SUPPORT LESBIENS</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>UNITED FLAVOUR</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>VLADIMÍR 518 FT. TEREZA ČERNOCHOVÁ, DJ MIKE TRAFIK</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>VYPSANÁ FIXA</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>WOHNOUT</name>
 						<from></from>
 						<to></to>
 					</event>
