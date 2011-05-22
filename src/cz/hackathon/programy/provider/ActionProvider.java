@@ -20,4 +20,5 @@ public interface ActionProvider {
     public List<Action> getAvailableActions();
     public Action getAction(int actionId);
     public Stages getStages(int actionId, int stageId);
+    public void addXml(String path);
 }
