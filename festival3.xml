@@ -1,0 +1,688 @@
+<?xml version="1.0" ?>
+<actions>
+<!--
+	<action>
+		<id></id>
+		<name></name>
+		<description></description>
+		<image></image>
+		<lat></lat>
+		<lon></lon>
+		<date></date>
+		<stages>
+			<stage>
+				<id></id>
+				<name></name>
+				<description></description>
+				<events>
+					<event>
+						<name></name>
+						<from></from>
+						<to></to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+-->
+	<action>
+		<id>1</id>
+		<name>SÁZAVAFEST</name>
+		<description>Sázavafest se za dobu své desetileté existence stal tradiční kulturní akcí, která patří mezi největší a nejnavštěvovanějších v ČR. Festival nabízí bohatý, pestrý a kvalitní kulturní program, příjemné prostředí s krásnou přírodou a historickými památkami.</description>
+		<image>http://www.sazavafest.cz/sites/default/files/hp-vizual.jpg</image>
+		<lat>49.77424</lat>
+		<lon>14.68915</lon>
+		<date>4.8.2011</date>
+		<stages>
+			<stage>
+				<id>1</id>
+				<name>CZECH STAGE</name>
+				<description></description>
+				<events>
+					<event>
+						<name>PROWIZORIUM</name>
+						<from>15:45</from>
+						<to>16:20</to>
+					</event>
+					<event>
+						<name>APPLE JUICE</name>
+						<from>16:45</from>
+						<to>17:35</to>
+					</event>
+					<event>
+						<name>RYBIČKY 48</name>
+						<from>18:00</from>
+						<to>18:50</to>
+					</event>
+					<event>
+						<name>WALDA GANG</name>
+						<from>19:20</from>
+						<to>20:10</to>
+					</event>
+					<event>
+						<name>STO ZVÍŘAT</name>
+						<from>20:40</from>
+						<to>21:40</to>
+					</event>
+					<event>
+						<name>WOHNOUT</name>
+						<from>22:10</from>
+						<to>23:10</to>
+					</event>
+					<event>
+						<name>KEKS</name>
+						<from>23:40</from>
+						<to>00:40</to>
+					</event>
+				</events>
+			</stage>
+			
+			<stage>
+				<id>2</id>
+				<name>BALBÍNKA</name>
+				<description></description>
+				<events>
+					<event>
+						<name>PEPA LÁBUS</name>
+						<from>14:50</from>
+						<to>15:45</to>
+					</event>
+					<event>
+						<name>PÍDÝ</name>
+						<from>16:05</from>
+						<to>16:55</to>
+					</event>
+					<event>
+						<name>PALEČEK & JANÍK</name>
+						<from>17:30</from>
+						<to>18:20</to>
+					</event>
+					<event>
+						<name>BASTA FIDEL</name>
+						<from>18:50</from>
+						<to>19:40</to>
+					</event>
+					<event>
+						<name>JIŘÍ SCHMITZER</name>
+						<from>20:10</from>
+						<to>21:00</to>
+					</event>
+					<event>
+						<name>VÁCLAV KOUBEK</name>
+						<from>21:40</from>
+						<to>22:30</to>
+					</event>
+					<event>
+						<name>IVAN HLAS TRIO</name>
+						<from>23:10</from>
+						<to>00:00</to>
+					</event>
+					<event>
+						<name>XAVI BAUMAXA</name>
+						<from>00:30</from>
+						<to>01:30</to>
+					</event>
+				</events>
+			</stage>
+			
+			<stage>
+				<id>3</id>
+				<name>JAM STAGE</name>
+				<description></description>
+				<events>
+					<event>
+						<name>Vítěz Emergenza</name>
+						<from>13:50</from>
+						<to>14:30</to>
+					</event>
+					<event>
+						<name>Vítěz Skutečná liga</name>
+						<from>14:50</from>
+						<to>15:30</to>
+					</event>
+					<event>
+						<name>Vítěz Battle</name>
+						<from>15:50</from>
+						<to>16:30</to>
+					</event>
+					<event>
+						<name>LUBOŠ JEŘÁBEK BAND</name>
+						<from>16:50</from>
+						<to>17:30</to>
+					</event>
+					<event>
+						<name>ROMAN DRAGOUN</name>
+						<from>17:50</from>
+						<to>18:40</to>
+					</event>
+					<event>
+						<name>M.CH.BAND</name>
+						<from>19:00</from>
+						<to>19:40</to>
+					</event>
+					<event>
+						<name>DERATIZÉŘI</name>
+						<from>20:00</from>
+						<to>20:40</to>
+					</event>
+					<event>
+						<name>DRUM CIRCLE</name>
+						<from>20:40</from>
+						<to>21:20</to>
+					</event>
+					<event>
+						<name>PROJEKTIL A JIŘÍ HOPP</name>
+						<from>21:20</from>
+						<to>22:00</to>
+					</event>
+					<event>
+						<name>MR. COCOMAN</name>
+						<from>22:20</from>
+						<to>23:10</to>
+					</event>
+					<event>
+						<name>GOOD FELLAS</name>
+						<from>23:30</from>
+						<to>00:20</to>
+					</event>
+					<event>
+						<name>NARCOTIC FIELDS</name>
+						<from>00:40</from>
+						<to>01:30</to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+
+	<action>
+		<id>2</id>
+		<name>SÁZAVAFEST</name>
+		<description>Sázavafest se za dobu své desetileté existence stal tradiční kulturní akcí, která patří mezi největší a nejnavštěvovanějších v ČR. Festival nabízí bohatý, pestrý a kvalitní kulturní program, příjemné prostředí s krásnou přírodou a historickými památkami.</description>
+		<image>http://www.sazavafest.cz/sites/default/files/hp-vizual.jpg</image>
+		<lat>49.77424</lat>
+		<lon>14.68915</lon>
+		<date>5.8.2011</date>
+		<stages>
+			<stage>
+				<id>1</id>
+				<name>CZECH STAGE</name>
+				<description></description>
+				<events>
+					<event>
+						<name>SCHODIŠTĚ</name>
+						<from>13:30</from>
+						<to>14:20</to>
+					</event>
+					<event>
+						<name>MANDRAGE</name>
+						<from>15:30</from>
+						<to>16:20</to>
+					</event>
+					<event>
+						<name>CHARLIE STRAIGHT</name>
+						<from>17:10</from>
+						<to>18:00</to>
+					</event>
+					<event>
+						<name>DAN BÁRTA & DARA ROLINS</name>
+						<from>19:00</from>
+						<to>20:00</to>
+					</event>
+					<event>
+						<name>NIGHTWORK</name>
+						<from>21:00</from>
+						<to>22:00</to>
+					</event>
+					<event>
+						<name>MONKEY BUSINESS</name>
+						<from>23:00</from>
+						<to>00:00</to>
+					</event>
+					<event>
+						<name>VYPSANÁ FIXA</name>
+						<from>01:00</from>
+						<to>02:00</to>
+					</event>
+				</events>
+			</stage>
+			
+			<stage>
+				<id>2</id>
+				<name>FOREIGN STAGE</name>
+				<description></description>
+				<events>
+					<event>
+						<name>TANX /sk/</name>
+						<from>14:20</from>
+						<to>15:30</to>
+					</event>
+					<event>
+						<name>TOXIQUE</name>
+						<from>16:20</from>
+						<to>17:10</to>
+					</event>
+					<event>
+						<name>NOUVELLE VAGUE /fr/</name>
+						<from>18:00</from>
+						<to>19:00</to>
+					</event>
+					<event>
+						<name>ALPHAVILLE /de/</name>
+						<from>20:00</from>
+						<to>21:00</to>
+					</event>
+					<event>
+						<name>KOSHEEN /uk/</name>
+						<from>22:00</from>
+						<to>23:00</to>
+					</event>
+					<event>
+						<name>IRIE RÉVOLTÉS /de-fr/</name>
+						<from>00:00</from>
+						<to>01:00</to>
+					</event>
+				</events>
+			</stage>
+			
+			<stage>
+				<id>3</id>
+				<name>BALBÍNKA</name>
+				<description></description>
+				<events>
+					<event>
+						<name>JARRET</name>
+						<from>12:10</from>
+						<to>13:00</to>
+					</event>
+					<event>
+						<name>VLADIMŔ MERTA</name>
+						<from>13:20</from>
+						<to>14:10</to>
+					</event>
+					<event>
+						<name>ŠTĚPÁN KOJAN</name>
+						<from>14:30</from>
+						<to>15:20</to>
+					</event>
+					<event>
+						<name>PRAGUE CONSPIRACY</name>
+						<from>15:50</from>
+						<to>16:40</to>
+					</event>
+					<event>
+						<name>VLASTA TŘEŠŇÁK</name>
+						<from>17:00</from>
+						<to>17:50</to>
+					</event>
+					<event>
+						<name>ABRAXAS</name>
+						<from>18:10</from>
+						<to>19:00</to>
+					</event>
+					<event>
+						<name>PRAGO UNION</name>
+						<from>19:20</from>
+						<to>20:10</to>
+					</event>
+					<event>
+						<name>MAD HEAD XL /ukr/</name>
+						<from>20:40</from>
+						<to>21:30</to>
+					</event>
+					<event>
+						<name>GREEN FROG FEET /de/</name>
+						<from>21:50</from>
+						<to>22:40</to>
+					</event>
+					<event>
+						<name>FAST FOOD ORCHESTRA</name>
+						<from>23:00</from>
+						<to>23:50</to>
+					</event>
+					<event>
+						<name>LAKESIDE X</name>
+						<from>00:20</from>
+						<to>01:10</to>
+					</event>
+					<event>
+						<name>NEŘEŽ</name>
+						<from>01:30</from>
+						<to>02:20</to>
+					</event>
+				</events>
+			</stage>
+			
+			<stage>
+				<id>4</id>
+				<name>BALBÍNKA</name>
+				<description></description>
+				<events>
+					<event>
+						<name>Vítěz Future line</name>
+						<from>12:50</from>
+						<to>13:30</to>
+					</event>
+					<event>
+						<name>Vítěz Šance Muzikus</name>
+						<from>13:50</from>
+						<to>14:30</to>
+					</event>
+					<event>
+						<name>JAKUB NOVÝ</name>
+						<from>14:50</from>
+						<to>15:30</to>
+					</event>
+					<event>
+						<name>VONDRÁČEK, KOCMAN</name>
+						<from>15:50</from>
+						<to>16:30</to>
+					</event>
+					<event>
+						<name>DRUM CIRCLE</name>
+						<from>16:30</from>
+						<to>17:10</to>
+					</event>
+					<event>
+						<name>HASTR</name>
+						<from>17:20</from>
+						<to>18:00</to>
+					</event>
+					<event>
+						<name>TANY TANY</name>
+						<from>18:00</from>
+						<to>18:40</to>
+					</event>
+					<event>
+						<name>M. ELEFTERIADU a S. BAREK</name>
+						<from>18:40</from>
+						<to>19:20</to>
+					</event>
+					<event>
+						<name>DRUM CIRCLE</name>
+						<from>19:20</from>
+						<to>20:00</to>
+					</event>
+					<event>
+						<name>SILESI JAH ALLSTARS</name>
+						<from>20:10</from>
+						<to>20:55</to>
+					</event>
+					<event>
+						<name>NANO</name>
+						<from>21:15</from>
+						<to>22:00</to>
+					</event>
+					<event>
+						<name>PUB ANIMALS</name>
+						<from>22:20</from>
+						<to>23:10</to>
+					</event>
+					<event>
+						<name>Vítěz European Reggae Contest</name>
+						<from>23:30</from>
+						<to>00:20</to>
+					</event>
+					<event>
+						<name>ROCKSTARS</name>
+						<from>00:40</from>
+						<to>01:40</to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+	
+	<action>
+		<id>3</id>
+		<name>SÁZAVAFEST</name>
+		<description>Sázavafest se za dobu své desetileté existence stal tradiční kulturní akcí, která patří mezi největší a nejnavštěvovanějších v ČR. Festival nabízí bohatý, pestrý a kvalitní kulturní program, příjemné prostředí s krásnou přírodou a historickými památkami.</description>
+		<image>http://www.sazavafest.cz/sites/default/files/hp-vizual.jpg</image>
+		<lat>49.77424</lat>
+		<lon>14.68915</lon>
+		<date>6.8.2011</date>
+		<stages>
+			<stage>
+				<id>1</id>
+				<name>CZECH STAGE</name>
+				<description></description>
+				<events>
+					<event>
+						<name>MIRO ŠMAJDA /sk/</name>
+						<from>12:00</from>
+						<to>12:50</to>
+					</event>
+					<event>
+						<name>PETR SPÁLENÝ</name>
+						<from>13:40</from>
+						<to>14:30</to>
+					</event>
+					<event>
+						<name>UDG</name>
+						<from>15:20</from>
+						<to>16:10</to>
+					</event>
+					<event>
+						<name>TOMÁŠ KLUS</name>
+						<from>17:00</from>
+						<to>18:00</to>
+					</event>
+					<event>
+						<name>J.A.R.</name>
+						<from>19:00</from>
+						<to>20:00</to>
+					</event>
+					<event>
+						<name>TATA BOJS</name>
+						<from>21:00</from>
+						<to>22:00</to>
+					</event>
+					<event>
+						<name>CHINASKI</name>
+						<from>23:10</from>
+						<to>00:10</to>
+					</event>
+					<event>
+						<name>XINDL X</name>
+						<from>01:10</from>
+						<to>02:00</to>
+					</event>
+				</events>
+			</stage>
+			
+			<stage>
+				<id>2</id>
+				<name>FOREIGN STAGE</name>
+				<description></description>
+				<events>
+					<event>
+						<name>LAVAGANCE /sk/</name>
+						<from>12:50</from>
+						<to>13:40</to>
+					</event>
+					<event>
+						<name>JAROSLAV SVĚCENÝ & CIGÁNSKI DIABLI /sk/</name>
+						<from>14:30</from>
+						<to>15:20</to>
+					</event>
+					<event>
+						<name>BELLERUCHE /uk/</name>
+						<from>16:10</from>
+						<to>17:00</to>
+					</event>
+					<event>
+						<name>JAZZANOVA live + PAUL RANDOLPH /de/</name>
+						<from>18:00</from>
+						<to>19:00</to>
+					</event>
+					<event>
+						<name>JANA KIRSCHNER /sk/</name>
+						<from>20:00</from>
+						<to>21:00</to>
+					</event>
+					<event>
+						<name>HURTS /uk/</name>
+						<from>22:00</from>
+						<to>23:10</to>
+					</event>
+					<event>
+						<name>THE SUBWAYS /uk/</name>
+						<from>00:10</from>
+						<to>01:10</to>
+					</event>
+				</events>
+			</stage>
+			
+			<stage>
+				<id>3</id>
+				<name>BALBÍNKA</name>
+				<description></description>
+				<events>
+					<event>
+						<name>HROMOSVOD</name>
+						<from>12:00</from>
+						<to>13:00</to>
+					</event>
+					<event>
+						<name>BRAN</name>
+						<from>13:20</from>
+						<to>14:10</to>
+					</event>
+					<event>
+						<name>CIRCUS PONORKA</name>
+						<from>14:30</from>
+						<to>15:20</to>
+					</event>
+					<event>
+						<name>VĚRA BÍLÁ</name>
+						<from>15:40</from>
+						<to>16:30</to>
+					</event>
+					<event>
+						<name>MICHAL VIEWEGH feat. J.A.R.</name>
+						<from>16:50</from>
+						<to>17:40</to>
+					</event>
+					<event>
+						<name>BLUE EFECT</name>
+						<from>18:00</from>
+						<to>18:50</to>
+					</event>
+					<event>
+						<name>TĚLA</name>
+						<from>19:10</from>
+						<to>20:00</to>
+					</event>
+					<event>
+						<name>CARTONNAGE</name>
+						<from>20:30</from>
+						<to>21:20</to>
+					</event>
+					<event>
+						<name>CHANCERS</name>
+						<from>21:40</from>
+						<to>22:30</to>
+					</event>
+					<event>
+						<name>REPUBLIC OF TWO</name>
+						<from>22:50</from>
+						<to>23:40</to>
+					</event>
+					<event>
+						<name>MICHAL HRŮZA (acoustic)</name>
+						<from>00:00</from>
+						<to>00:50</to>
+					</event>
+					<event>
+						<name>MICHAL PAVLÍČEK & LUCCA</name>
+						<from>01:10</from>
+						<to>02:20</to>
+					</event>
+				</events>
+			</stage>
+			
+			<stage>
+				<id>4</id>
+				<name>BALBÍNKA</name>
+				<description></description>
+				<events>
+					<event>
+						<name>Šance Muzikus 2</name>
+						<from>11:50</from>
+						<to>12:30</to>
+					</event>
+					<event>
+						<name>Startér XT3</name>
+						<from>12:50</from>
+						<to>13:30</to>
+					</event>
+					<event>
+						<name>Rock Arena</name>
+						<from>13:50</from>
+						<to>14:30</to>
+					</event>
+					<event>
+						<name>LININGS</name>
+						<from>14:50</from>
+						<to>15:30</to>
+					</event>
+					<event>
+						<name>THE SNUFF</name>
+						<from>15:50</from>
+						<to>16:30</to>
+					</event>
+					<event>
+						<name>DRUM CIRCLE</name>
+						<from>16:30</from>
+						<to>17:10</to>
+					</event>
+					<event>
+						<name>JANEK LEDECKÝ</name>
+						<from>17:10</from>
+						<to>18:00</to>
+					</event>
+					<event>
+						<name>TANY TANY</name>
+						<from>18:00</from>
+						<to>18:40</to>
+					</event>
+					<event>
+						<name>SONICATES /sk/ (vítěz Battle)</name>
+						<from>18:40</from>
+						<to>19:25</to>
+					</event>
+					<event>
+						<name>DRUM CIRCLE</name>
+						<from>19:25</from>
+						<to>20:05</to>
+					</event>
+					<event>
+						<name>TOKHI</name>
+						<from>20:10</from>
+						<to>20:50</to>
+					</event>
+					<event>
+						<name>vítěz Český Youtube fest</name>
+						<from>21:10</from>
+						<to>21:50</to>
+					</event>
+					<event>
+						<name>DUB-O-NET</name>
+						<from>22:10</from>
+						<to>23:00</to>
+					</event>
+					<event>
+						<name>VLADIMIR CIRKUS</name>
+						<from>23:20</from>
+						<to>00:10</to>
+					</event>
+					<event>
+						<name>NATURAL</name>
+						<from>00:30</from>
+						<to>01:40</to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+</actions>
