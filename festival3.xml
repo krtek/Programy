@@ -27,7 +27,7 @@
 -->
 	<action>
 		<id>1</id>
-		<name>SÁZAVAFEST</name>
+		<name>SÁZAVAFEST - PÁTEK</name>
 		<description>Sázavafest se za dobu své desetileté existence stal tradiční kulturní akcí, která patří mezi největší a nejnavštěvovanějších v ČR. Festival nabízí bohatý, pestrý a kvalitní kulturní program, příjemné prostředí s krásnou přírodou a historickými památkami.</description>
 		<image>http://www.sazavafest.cz/sites/default/files/hp-vizual.jpg</image>
 		<lat>49.77424</lat>
@@ -197,7 +197,7 @@
 
 	<action>
 		<id>2</id>
-		<name>SÁZAVAFEST</name>
+		<name>SÁZAVAFEST - SOBOTA</name>
 		<description>Sázavafest se za dobu své desetileté existence stal tradiční kulturní akcí, která patří mezi největší a nejnavštěvovanějších v ČR. Festival nabízí bohatý, pestrý a kvalitní kulturní program, příjemné prostředí s krásnou přírodou a historickými památkami.</description>
 		<image>http://www.sazavafest.cz/sites/default/files/hp-vizual.jpg</image>
 		<lat>49.77424</lat>
@@ -435,7 +435,7 @@
 	
 	<action>
 		<id>3</id>
-		<name>SÁZAVAFEST</name>
+		<name>SÁZAVAFEST - NEDĚLE</name>
 		<description>Sázavafest se za dobu své desetileté existence stal tradiční kulturní akcí, která patří mezi největší a nejnavštěvovanějších v ČR. Festival nabízí bohatý, pestrý a kvalitní kulturní program, příjemné prostředí s krásnou přírodou a historickými památkami.</description>
 		<image>http://www.sazavafest.cz/sites/default/files/hp-vizual.jpg</image>
 		<lat>49.77424</lat>
