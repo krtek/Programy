@@ -1,12 +1,12 @@
 package cz.hackathon.programy.provider;
 
-import android.util.Log;
-import cz.hackathon.programy.dto.Action;
-import cz.hackathon.programy.dto.StageEvent;
-import cz.hackathon.programy.dto.Stage;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import android.util.Log;
+import cz.hackathon.programy.dto.Action;
+import cz.hackathon.programy.dto.Stage;
+import cz.hackathon.programy.dto.StageEvent;
 
 /**
  * User: lukas.marek@cleverlance.com
