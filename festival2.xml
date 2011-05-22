@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<actions>
+<!--
+	<action>
+		<id></id>
+		<name></name>
+		<description></description>
+		<image></image>
+		<lat></lat>
+		<lon></lon>
+		<date></date>
+		<stages>
+			<stage>
+				<id></id>
+				<name></name>
+				<description></description>
+				<events>
+					<event>
+						<name></name>
+						<from></from>
+						<to></to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+-->
+	<action>
+		<id>1</id>
+		<name>České hrady - Točník</name>
+		<description>Mezi nejmladší, ale rozlohou největší hrady v Čechách náleží Točník, nástupce hradu Žebráka. Král Václav IV. sice nechal hrad Žebrák v l. 1383-96 upravit pro svou potřebu, ale ani to nepostačovalo, a tak si po jeho značném poškození hradu požárem nechal postavit nedaleko Žebráku nový hrad. Není známo, kdy byla stavba Točníku zahájena, ale již v r. 1398 zde již pobýval král Václav IV. (obytný palác byl v té době bezpochyby dokončen).</description>
+		<image>http://www.ceskehrady.cz/files/ch/text/tocnik_podium_ram.gif</image>
+		<lat>49.88688</lat>
+		<lon>13.88167</lon>
+		<date>15.7.2011</date>
+		<stages>
+			<stage>
+				<id>1</id>
+				<name>Program</name>
+				<description></description>
+				<events>
+					<event>
+						<name>JIŘÍ SCHMITZER</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>TATABOJS</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>TOMÁŠ KLUS</name>
+						<from></from>
+						<to></to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+	<action>
+		<id>2</id>
+		<name>České hrady - Točník</name>
+		<description>Mezi nejmladší, ale rozlohou největší hrady v Čechách náleží Točník, nástupce hradu Žebráka. Král Václav IV. sice nechal hrad Žebrák v l. 1383-96 upravit pro svou potřebu, ale ani to nepostačovalo, a tak si po jeho značném poškození hradu požárem nechal postavit nedaleko Žebráku nový hrad. Není známo, kdy byla stavba Točníku zahájena, ale již v r. 1398 zde již pobýval král Václav IV. (obytný palác byl v té době bezpochyby dokončen).</description>
+		<image>http://www.ceskehrady.cz/files/ch/text/tocnik_podium_ram.gif</image>
+		<lat>49.88688</lat>
+		<lon>13.88167</lon>
+		<date>16.7.2011</date>
+		<stages>
+			<stage>
+				<id>1</id>
+				<name>Program</name>
+				<description></description>
+				<events>
+					<event>
+						<name>DILATED</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>DIVOKEJ BILL</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>GIPSY.CZ</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>KAŠPÁREK V ROHLÍKU</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>KRYŠTOF</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>PIPES AND PINTS</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>QUEENS OF EVERYTHING</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>SKYLINE</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>SUNSHINE</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>SUPPORT LESBIENS</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>UNITED FLAVOUR</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>VLADIMÍR 518 FT. TEREZA ČERNOCHOVÁ, DJ MIKE TRAFIK</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>VYPSANÁ FIXA</name>
+						<from></from>
+						<to></to>
+					</event>
+					<event>
+						<name>WOHNOUT</name>
+						<from></from>
+						<to></to>
+					</event>
+				</events>
+			</stage>
+		</stages>
+	</action>
+</actions>
