@@ -16,12 +16,6 @@
 
   		<activity android:name="StageActivity"/>
         <activity android:name="FestTabActivity"/>
-        <activity android:name="ActionActivity">
-              <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name="ListActionActivity">
               <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

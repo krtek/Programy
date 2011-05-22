@@ -79,8 +79,8 @@ public class DomParser extends BaseFeedParser {
                                 } else if (stageName.equalsIgnoreCase(DESCRIPTION) && stageProperty.getFirstChild() != null){
                                 	stage.desc = stageProperty.getFirstChild().getNodeValue();
                                 } else if (stageName.equalsIgnoreCase(EVENTS) && stageProperty.getFirstChild() != null){
-                                	stage.events = new ArrayList<StageEvent> ();
-                                    NodeList eventsNodes = ((Element) property).getElementsByTagName(EVENT);
+                                	//stage.events = new ArrayList<StageEvent> ();
+                                    NodeList eventsNodes = ((Element) stageProperty).getElementsByTagName(EVENT);
                                     for (int m=0;m<eventsNodes.getLength();m++){
                                     	
                                         StageEvent event = new StageEvent();
