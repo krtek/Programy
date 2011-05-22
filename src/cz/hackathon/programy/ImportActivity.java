@@ -13,7 +13,7 @@ import cz.hackathon.programy.provider.ActionProvider;
 import cz.hackathon.programy.provider.ProviderFactory;
 
 /**
- * 
+ * Importuje akce z XML souboru
  * @author arcao@arcao.com
  * 
  */
@@ -76,8 +76,12 @@ public class ImportActivity extends Activity implements OnCancelListener {
 			handler.post(new Runnable() {
 				public void run() {
 					progressDialog.dismiss();
-					// TODO switch to activity
 					
+					// TODO switch to Festivals
+					final Intent intent = new Intent(ImportActivity.this, FestTabActivity.class);
+					startActivity(intent);
+					
+					finish();
 				}
 			});
 		}
