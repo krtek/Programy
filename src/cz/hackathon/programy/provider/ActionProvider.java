@@ -1,7 +1,7 @@
 package cz.hackathon.programy.provider;
 
 import cz.hackathon.programy.dto.Action;
-import cz.hackathon.programy.dto.Stages;
+import cz.hackathon.programy.dto.Stage;
 
 import java.util.List;
 
@@ -19,6 +19,6 @@ public interface ActionProvider {
      */
     public List<Action> getAvailableActions();
     public Action getAction(int actionId);
-    public Stages getStages(int actionId, int stageId);
+    public Stage getStages(int actionId, int stageId);
     public void addXml(String path);
 }
