@@ -26,12 +26,48 @@ public class FakeProvider implements ActionProvider {
 			a1.locationLat = "?";
 			a1.locationLong = "?";
 //			a1.stages = new ArrayList<Stage>();
-			Stage s1 = new Stage();
-			s1.name = "Stage1";
-			s1.desc = "Hlavní stage";
-			s1.events.add(new StageEvent("Akce01", "8:00", "10:00"));
-			s1.events.add(new StageEvent("Akce02", "8:00", "10:00"));
-			a1.stages.add(s1);
+            {
+                Stage s1 = new Stage();
+                s1.name = "Stage1";
+                s1.desc = "Hlavní stage";
+                s1.events.add(new StageEvent("Akce01", "8:00", "10:00"));
+                s1.events.add(new StageEvent("Akce02", "8:00", "10:00"));
+                a1.stages.add(s1);
+            }
+            {
+                Stage s1 = new Stage();
+                s1.name = "Stage2";
+                s1.desc = "Vedlejší stage";
+                s1.events.add(new StageEvent("Akce01", "8:00", "10:00"));
+                s1.events.add(new StageEvent("Akce02", "8:00", "10:00"));
+                a1.stages.add(s1);
+            }
+            {
+                Stage s1 = new Stage();
+                s1.name = "Stage3";
+                s1.desc = "Vedlejší stage";
+                s1.events.add(new StageEvent("Akce01", "8:00", "10:00"));
+                s1.events.add(new StageEvent("Akce02", "8:00", "10:00"));
+                a1.stages.add(s1);
+            }
+            {
+                Stage s1 = new Stage();
+                s1.name = "Stage4";
+                s1.desc = "Vedlejší stage";
+                s1.events.add(new StageEvent("Akce01", "8:00", "10:00"));
+                s1.events.add(new StageEvent("Akce02", "8:00", "10:00"));
+                a1.stages.add(s1);
+            }
+            {
+                Stage s1 = new Stage();
+                s1.name = "Stage5";
+                s1.desc = "Vedlejší stage";
+                s1.events.add(new StageEvent("Akce01", "8:00", "10:00"));
+                s1.events.add(new StageEvent("Akce02", "8:00", "10:00"));
+                a1.stages.add(s1);
+            }
+
+
 			result.add(a1);
 		}
 		{
