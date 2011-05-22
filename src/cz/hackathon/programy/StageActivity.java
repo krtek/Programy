@@ -35,7 +35,7 @@ public class StageActivity extends ListActivity {
 		setContentView(R.layout.stage_detail);
 
 		Intent i = getIntent();
-		i.getExtras().getInt(ActionProvider.ACTION_ID);
+//		i.getExtras().getInt(ActionProvider.ACTION_ID);
 
 		this.stage = ProviderFactory.getProvider().getStages(
 				i.getExtras().getInt(ActionProvider.ACTION_ID),
