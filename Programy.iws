@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c5673ce-35e5-4d12-8270-c0de1d2069ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/provider/ActionProvider.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/provider/ActionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/provider/FakeProvider.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/provider/FakeProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/action_title.xml" afterPath="$PROJECT_DIR$/res/layout/action_title.xml" />
     </list>
     <ignored path="Programy.iws" />
     <ignored path=".idea/workspace.xml" />
