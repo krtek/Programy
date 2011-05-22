@@ -37,7 +37,7 @@ public class StageActivity extends ListActivity {
 		Intent i = getIntent();
 //		i.getExtras().getInt(ActionProvider.ACTION_ID);
 
-		this.stage = ProviderFactory.getProvider().getStages(
+		this.stage = ProviderFactory.getProvider(this).getStages(
 				i.getExtras().getInt(ActionProvider.ACTION_ID),
 				i.getExtras().getInt(ActionProvider.STAGE_ID));
 

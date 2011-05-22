@@ -18,10 +18,8 @@ public class FestTabActivity extends TabActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.festtabs);
 
-		Intent i = getIntent();
-
-		ActionProvider data = ProviderFactory.getProvider();
-
+        ActionProvider data = ProviderFactory.getProvider(this);
+        				
 		int actionId = i.getExtras().getInt(ActionProvider.ACTION_ID);
 
 		Action action = data.getAction(actionId);
