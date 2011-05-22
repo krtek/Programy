@@ -50,18 +50,9 @@ public class XmlActionProvider implements ActionProvider {
 		DomParser parser = new DomParser(path);
 		List<Action> actions = parser.parse();
 		
-        try {
-
-            for (Action action : actions) {
-            	odb.store(action);
-            }
-        } finally {
-            if (odb != null) {
-                // Close the database
-                odb.close();
-            }
-        }
-
+		for (Action action : actions) {
+			odb.store(action);
+		}
 	}
 
 }
