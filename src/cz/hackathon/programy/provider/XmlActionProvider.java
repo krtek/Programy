@@ -27,12 +27,22 @@ public class XmlActionProvider implements ActionProvider {
 
 	@Override
 	public Action getAction(int actionId) {
+        IQuery query = new CriteriaQuery(Action.class);
+        Objects<Action> actions = odb.getObjects(query);
+        int i = 0;
+        for (Action a: actions) {
+            if (i == actionId) {
+                return a;
+            }
+            i++;
+        }
         return null;
 	}
 
 	@Override
 	public Stage getStages(int actionId, int stageId) {
-        return null;
+        Action a = getAction(actionId);
+        return a.stages.get(stageId);
 	}
 
 	@Override

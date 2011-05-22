@@ -20,7 +20,7 @@ public class FestTabActivity extends TabActivity {
         
         Intent i = getIntent();
 
-        ActionProvider data = ProviderFactory.getProvider();
+        ActionProvider data = ProviderFactory.getProvider(this);
         				
 		int actionId = i.getExtras().getInt(ActionProvider.ACTION_ID);
 				
