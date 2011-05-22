@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c5673ce-35e5-4d12-8270-c0de1d2069ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/action_title.xml" afterPath="$PROJECT_DIR$/res/layout/action_title.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/provider/FakeProvider.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/provider/FakeProvider.java" />
     </list>
     <ignored path="Programy.iws" />
@@ -26,7 +27,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java" line="41" class="cz.hackathon.programy.ActionActivity" package="cz.hackathon.programy">
+      <breakpoint url="file://$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java" line="44" class="cz.hackathon.programy.ActionActivity" package="cz.hackathon.programy">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -91,13 +92,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ActionActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="8" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.0">
+            <state line="51" column="94" selection-start="1893" selection-end="1893" vertical-scroll-proportion="0.62660944">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="action_title.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/action_title.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="71" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,15 +119,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actions.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/actions.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="188" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -158,10 +159,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FakeProvider.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FakeProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/provider/FakeProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="33" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.84090906">
+            <state line="25" column="39" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -203,13 +204,13 @@
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/provider/ActionProvider.java" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/dto/Action.java" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/dto/Stage.java" />
-        <option value="$PROJECT_DIR$/res/layout/action_title.xml" />
-        <option value="$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/action_row.xml" />
         <option value="$PROJECT_DIR$/res/layout/actions.xml" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/ListActionActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/provider/FakeProvider.java" />
+        <option value="$PROJECT_DIR$/res/layout/action_title.xml" />
+        <option value="$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java" />
       </list>
     </option>
   </component>
@@ -298,15 +299,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="programy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="provider" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,7 +330,7 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="AndroidTargetDevices" value="39302933279200EC" />
+    <property name="AndroidTargetDevices" value="38335EC3C2EF00EC" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -523,7 +516,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="746" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -632,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/action_title.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="37" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/actions.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="188" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
@@ -650,33 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="72" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/ListActionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="36" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="8" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/dto/Stage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="63" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,10 +655,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/dto/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="50" selection-start="402" selection-end="420" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="13" column="63" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -712,7 +673,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/provider/FakeProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="33" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.84090906">
+        <state line="25" column="39" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="50" selection-start="402" selection-end="420" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/action_title.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="71" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/ListActionActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="36" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="94" selection-start="1893" selection-end="1893" vertical-scroll-proportion="0.62660944">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
