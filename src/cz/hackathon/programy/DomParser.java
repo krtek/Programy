@@ -11,6 +11,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import android.util.Log;
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.dto.Stage;
 import cz.hackathon.programy.dto.StageEvent;
@@ -90,7 +91,9 @@ public class DomParser extends BaseFeedParser {
                                             Node eventProperty = eventProperties.item(n);
                                             String eventName = eventProperty.getNodeName();
                                             if (eventName.equalsIgnoreCase(NAME) && eventProperty.getFirstChild() != null){
+                                            	Log.d("FEST", stage.name);
                                             	event.name = eventProperty.getFirstChild().getNodeValue();
+                                               	Log.d("FEST", event.name);
                                             } else if (eventName.equalsIgnoreCase(FROM) && eventProperty.getFirstChild() != null){
                                             	event.from = eventProperty.getFirstChild().getNodeValue();
                                             } else if (eventName.equalsIgnoreCase(TO) && eventProperty.getFirstChild() != null){
