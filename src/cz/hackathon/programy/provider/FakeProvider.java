@@ -1,5 +1,6 @@
 package cz.hackathon.programy.provider;
 
+import android.util.Log;
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.dto.StageEvent;
 import cz.hackathon.programy.dto.Stages;
@@ -64,5 +65,9 @@ public class FakeProvider implements ActionProvider {
 
     public Stages getStages(int actionId, int stageId) {
         return this.actions.get(actionId).stages.get(stageId);
+    }
+
+    public void addXml(String path) {
+        Log.d("FakeProvider", "Going to fetch:" + path);
     }
 }
