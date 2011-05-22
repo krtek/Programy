@@ -3,7 +3,7 @@ package cz.hackathon.programy.provider;
 import android.util.Log;
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.dto.StageEvent;
-import cz.hackathon.programy.dto.Stages;
+import cz.hackathon.programy.dto.Stage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +24,8 @@ public class FakeProvider implements ActionProvider {
         a1.imageUrl = "http://www.sazavafest.cz/sites/default/files/hp-vizual.jpg";
         a1.locationLat = "?";
         a1.locationLong = "?";
-        a1.stages = new ArrayList<Stages>();
-        Stages s1 = new Stages();
+        a1.stages = new ArrayList<Stage>();
+        Stage s1 = new Stage();
         s1.name = "Stage1";
         s1.desc = "Hlavní stage";
         s1.events.add(new StageEvent("Akce01", "8:00", "10:00"));
@@ -39,8 +39,8 @@ public class FakeProvider implements ActionProvider {
         a1.imageUrl = "http://www.sazavafest.cz/sites/default/files/hp-vizual.jpg";
         a1.locationLat = "?";
         a1.locationLong = "?";
-        a1.stages = new ArrayList<Stages>();
-        Stages s2 = new Stages();
+        a1.stages = new ArrayList<Stage>();
+        Stage s2 = new Stage();
         s2.name = "Stage1";
         s2.desc = "Hlavní stage";
         s2.events.add(new StageEvent("Akce01", "8:00", "10:00"));
@@ -63,7 +63,7 @@ public class FakeProvider implements ActionProvider {
         return this.actions.get(actionId);
     }
 
-    public Stages getStages(int actionId, int stageId) {
+    public Stage getStages(int actionId, int stageId) {
         return this.actions.get(actionId).stages.get(stageId);
     }
 
