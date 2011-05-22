@@ -35,7 +35,7 @@ public class StageActivity extends ListActivity {
 		setContentView(R.layout.stage_detail);
 
 		Intent i = getIntent();
-		i.getExtras().getInt(ActionProvider.ACTION_ID);
+//		i.getExtras().getInt(ActionProvider.ACTION_ID);
 
 		this.stage = ProviderFactory.getProvider(this).getStages(
 				i.getExtras().getInt(ActionProvider.ACTION_ID),
@@ -88,7 +88,7 @@ public class StageActivity extends ListActivity {
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
 		StageEvent event = list.get(((AdapterContextMenuInfo)menuInfo).position);
-		menu.add(Menu.NONE, ADD_NOTIFICATION, 0, "Pridat upozorneni na "+event);// .setIcon(android.R.drawable);
+		menu.add(Menu.NONE, ADD_NOTIFICATION, 0, "Pridat upozorneni na "+event).setIcon(android.R.drawable.ic_dialog_alert);
 		// menu.add(Menu.NONE, PREFS_MENU, 1,
 		// R.string.preferences).setIcon(android.R.drawable.ic_menu_preferences);
 		// super.onCreateContextMenu(menu, v, menuInfo);

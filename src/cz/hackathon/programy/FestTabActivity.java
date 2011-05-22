@@ -16,40 +16,44 @@ public class FestTabActivity extends TabActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-        setContentView(R.layout.festtabs); 
-        
-        Intent i = getIntent();
+		setContentView(R.layout.festtabs);
 
         ActionProvider data = ProviderFactory.getProvider(this);
         				
 		int actionId = i.getExtras().getInt(ActionProvider.ACTION_ID);
-				
+
 		Action action = data.getAction(actionId);
-		
+
 		Resources res = getResources(); // Resource object to get Drawables
 		TabHost tabHost = getTabHost(); // The activity TabHost
 		TabHost.TabSpec spec; // Resusable TabSpec for each tab
-		Intent intent; // Reusable Intent for each tab		
-		
+		Intent intent; // Reusable Intent for each tab
+
 		{
 			// // Do the same for the other tabs
-			 intent = new Intent().setClass(this, ActionActivity.class);
-			 intent.putExtra(ActionProvider.ACTION_ID, actionId);
-			 spec = tabHost.newTabSpec("albums").
-			 setIndicator("Detail", res.getDrawable(android.R.drawable.ic_menu_gallery))
-			 .setContent(intent);
-			 tabHost.addTab(spec);
+			intent = new Intent().setClass(this, ActionActivity.class);
+			intent.putExtra(ActionProvider.ACTION_ID, actionId);
+			spec = tabHost
+					.newTabSpec("albums")
+					.setIndicator("Detail",
+							res.getDrawable(android.R.drawable.ic_menu_gallery))
+					.setContent(intent);
+			tabHost.addTab(spec);
 		}
-		
+
 		int stageId = 0;
-		for (Stage stage : action.stages) {			
+		for (Stage stage : action.stages) {
 			// Initialize a TabSpec for each tab and add it to the TabHost
 			// Create an Intent to launch an Activity for the tab (to be reused)
 			intent = new Intent().setClass(this, StageActivity.class);
-			 intent.putExtra(ActionProvider.ACTION_ID, actionId);
-			 intent.putExtra(ActionProvider.STAGE_ID, stageId);
-			spec = tabHost.newTabSpec("artists").
-			setIndicator(stage.name, res.getDrawable(android.R.drawable.ic_lock_silent_mode_off)).setContent(intent);
+			intent.putExtra(ActionProvider.ACTION_ID, actionId);
+			intent.putExtra(ActionProvider.STAGE_ID, stageId);
+			spec = tabHost
+					.newTabSpec("artists")
+					.setIndicator(
+							stage.name,
+							res.getDrawable(android.R.drawable.ic_lock_silent_mode_off))
+					.setContent(intent);
 			tabHost.addTab(spec);
 			stageId++;
 		}
