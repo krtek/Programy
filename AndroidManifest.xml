@@ -7,23 +7,42 @@
 
 
     <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name=".Festivals"
+        <activity android:name="ListActionActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter>
-            	<action android:name="android.intent.action.VIEW" />
-      			<category android:name="android.intent.category.DEFAULT" />
-      			<category android:name="android.intent.category.BROWSABLE" />
-      			<data android:host="kam-za-kulturou.cz" android:scheme="http" android:pathPrefix="/akce/"  />
-    		</intent-filter>
         </activity>
 
+<<<<<<< HEAD
 		<activity android:name="ActionActivity"></activity>
   		<activity android:name="FestTabActivity"></activity>
   		<activity android:name="StageActivity"></activity>
+=======
+  		<activity android:name="FestTabActivity"/>
+>>>>>>> 2d3d49c47d0c7eb00cd693ee54d70154c943b494
 
+  		<activity android:name="StageActivity"/>
+        <activity android:name="ActionActivity">
+              <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ListActionActivity">
+              <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+  		<activity android:name="ImportActivity">
+  			<intent-filter>
+            	<action android:name="android.intent.action.VIEW" />
+      			<category android:name="android.intent.category.DEFAULT" />
+      			<category android:name="android.intent.category.BROWSABLE" />
+      			<data android:host="programy.arcao.com" android:scheme="http" android:pathPrefix="/akce/"  />
+    		</intent-filter>
+  		</activity>
     </application>
 </manifest>

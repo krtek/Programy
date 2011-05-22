@@ -2,4 +2,5 @@
 <resources>
     <string name="hello">Hello World, Festivals!</string>
     <string name="app_name">Programy</string>
+    <string name="import_message">Stahuji program...</string>
 </resources>

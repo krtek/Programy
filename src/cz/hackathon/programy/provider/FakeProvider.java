@@ -1,18 +1,19 @@
 package cz.hackathon.programy.provider;
 
-import android.util.Log;
-import cz.hackathon.programy.dto.Action;
-import cz.hackathon.programy.dto.StageEvent;
-import cz.hackathon.programy.dto.Stage;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import android.util.Log;
+import cz.hackathon.programy.dto.Action;
+import cz.hackathon.programy.dto.Stage;
+import cz.hackathon.programy.dto.StageEvent;
 
 /**
  * User: lukas.marek@cleverlance.com Date: 22.5.11 Time: 12:28
  */
 public class FakeProvider implements ActionProvider {
 	private List<Action> actions;
+
 
 	public FakeProvider() {
 		List<Action> result = new ArrayList<Action>();
@@ -50,7 +51,6 @@ public class FakeProvider implements ActionProvider {
 			a1.stages.add(s2);
 			result.add(a1);
 		}
-
 		this.actions = result;
 	}
 
