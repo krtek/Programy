@@ -1,5 +1,7 @@
 package cz.hackathon.programy;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -13,9 +15,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.provider.ActionProvider;
-import cz.hackathon.programy.provider.ProviderFactory;
-
-import java.util.List;
 
 /**
  * User: lukas.marek@cleverlance.com
@@ -34,7 +33,11 @@ public class ListActionActivity extends Activity {
         super.onResume();
 
         ListView list = (ListView) findViewById(R.id.list);
-        list.setAdapter(new ActionAdapter(ProviderFactory.getProvider().getAvailableActions(), this));
+		
+		ActionProvider provider = ((FestivalyApplication)getApplication()).provider;
+		
+
+        list.setAdapter(new ActionAdapter(provider.getAvailableActions(), this));
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
