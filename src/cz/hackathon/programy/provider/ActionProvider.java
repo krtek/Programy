@@ -1,6 +1,7 @@
 package cz.hackathon.programy.provider;
 
 import cz.hackathon.programy.dto.Action;
+import cz.hackathon.programy.dto.Stages;
 
 import java.util.List;
 
@@ -10,9 +11,13 @@ import java.util.List;
  * Time: 12:25
  */
 public interface ActionProvider {
+    public static final String ACTION_ID = "actionId";
+    public static final String STAGE_ID = "stageId";
     /**
      * Returns list of actions stored in device.
      * @return
      */
     public List<Action> getAvailableActions();
+    public Action getAction(int actionId);
+    public Stages getStages(int actionId, int stageId);
 }

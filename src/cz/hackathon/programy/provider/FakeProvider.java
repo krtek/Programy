@@ -13,7 +13,9 @@ import java.util.List;
  * Time: 12:28
  */
 public class FakeProvider implements ActionProvider {
-    public List<Action> getAvailableActions() {
+    private List<Action> actions;
+
+    public FakeProvider() {
         Action a1 = new Action();
         a1.id = "01";
         a1.name = "Sázava Fest - pátek";
@@ -48,7 +50,19 @@ public class FakeProvider implements ActionProvider {
         result.add(a1);
         result.add(a2);
 
-        return result;
+        this.actions = result;
+    }
 
+
+    public List<Action> getAvailableActions() {
+        return this.actions;
+    }
+
+    public Action getAction(int actionId) {
+        return this.actions.get(actionId);
+    }
+
+    public Stages getStages(int actionId, int stageId) {
+        return this.actions.get(actionId).stages.get(stageId);
     }
 }
