@@ -16,11 +16,5 @@ public class ActionActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.action_title);
-		Intent intent; // Reusable Intent for each tab
-
-		// Create an Intent to launch an Activity for the tab (to be reused)
-		intent = new Intent().setClass(this, FestTabActivity.class);
-		startActivity(intent);
-
     }
 }
