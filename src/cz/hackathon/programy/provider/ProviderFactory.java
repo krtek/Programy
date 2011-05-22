@@ -1,12 +1,17 @@
 package cz.hackathon.programy.provider;
 
+import android.app.Activity;
+import android.content.Context;
+import cz.hackathon.programy.FestivalyApplication;
+
 /**
  * User: lukas.marek@cleverlance.com
  * Date: 22.5.11
  * Time: 12:27
  */
 public class ProviderFactory {
-    public static ActionProvider getProvider() {
-        return new FakeProvider();
+
+    public static ActionProvider getProvider(Activity context) {
+        return ((FestivalyApplication)(context.getApplication())).provider;
     }
 }

@@ -42,7 +42,7 @@ public class ActionActivity extends Activity {
         Intent i = getIntent();
         int actionId = i.getIntExtra(ActionProvider.ACTION_ID, 0);
 
-        final Action a = ProviderFactory.getProvider().getAction(actionId);
+        final Action a = ProviderFactory.getProvider(this).getAction(actionId);
         ((TextView) findViewById(R.id.action_name)).setText(a.name);
         ((TextView) findViewById(R.id.action_description)).setText(a.description);
         ((TextView) findViewById(R.id.action_url)).setText(a.webUrl);
