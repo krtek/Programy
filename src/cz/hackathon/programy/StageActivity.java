@@ -59,8 +59,16 @@ public class StageActivity extends ListActivity {
 				StageEvent event = list.get(position);
 				((TextView) convertView.findViewById(R.id.eventName))
 						.setText(event.name);
+				String time = "";
+				if (event.from != null)
+					time = time + event.from;
+				if (event.to != null && time.length() != 0)
+					time = time + " - ";
+				if (event.to != null)
+					time = time + event.to;
+				
 				((TextView) convertView.findViewById(R.id.eventFromTo))
-						.setText(event.from + " - " + event.to);
+						.setText(time);
 				// return super.getView(position, convertView, parent);
 				return convertView;
 			}

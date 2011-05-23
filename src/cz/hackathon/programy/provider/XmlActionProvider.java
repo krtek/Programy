@@ -50,7 +50,7 @@ public class XmlActionProvider implements ActionProvider {
 		for (Action action : actions) {
 			boolean found = false;
 			for (Action availableAction : available) {
-				if (!availableAction.name.equals(action.name) || !availableAction.id.equals(action.id)) {
+				if (availableAction.name.equals(action.name) && availableAction.id.equals(action.id)) {
 					found = true;
 					break;
 				}
