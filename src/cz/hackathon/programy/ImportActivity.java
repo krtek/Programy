@@ -1,7 +1,5 @@
 package cz.hackathon.programy;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -12,9 +10,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.provider.ActionProvider;
-import cz.hackathon.programy.provider.XmlActionProvider;
+import cz.hackathon.programy.provider.ProviderFactory;
 
 /**
  * Importuje akce z XML souboru
@@ -27,12 +24,12 @@ public class ImportActivity extends Activity implements OnCancelListener {
 	private ImportThread importThread;
 	private ProgressDialog progressDialog;
 	private Resources res;
-	private XmlActionProvider provider;
+	private ActionProvider provider;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		provider = ((FestivalyApplication)getApplication()).provider;
+		provider = ProviderFactory.getProvider(this);
 		handler = new Handler();
 		res = getResources();
 
