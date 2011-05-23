@@ -64,6 +64,10 @@ public class DomParser extends BaseFeedParser {
                         action.description = property.getFirstChild().getNodeValue();
                     } else if (name.equalsIgnoreCase(IMAGE) && property.getFirstChild() != null){
                         action.imageUrl = property.getFirstChild().getNodeValue();
+                    } else if (name.equalsIgnoreCase(LAT) && property.getFirstChild() != null){
+                        action.locationLat = property.getFirstChild().getNodeValue();
+                    } else if (name.equalsIgnoreCase(LON) && property.getFirstChild() != null){
+                        action.locationLong = property.getFirstChild().getNodeValue();
                     } else if (name.equalsIgnoreCase(STAGES) && property.getFirstChild() != null){
                     	action.stages = new ArrayList<Stage> ();
                         NodeList stagesNodes = ((Element) property).getElementsByTagName(STAGE);

@@ -1,7 +1,14 @@
 package cz.hackathon.programy;
 
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -14,13 +21,6 @@ import android.widget.TextView;
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.provider.ActionProvider;
 import cz.hackathon.programy.provider.ProviderFactory;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * User: lukas.marek@cleverlance.com
@@ -28,6 +28,7 @@ import java.io.InputStream;
  * Time: 12:18
  */
 public class ActionActivity extends Activity {
+	private final static String TAG = "Festacky|ActionActivity";
 
         /** Called when the activity is first created. */
     @Override
@@ -49,6 +50,7 @@ public class ActionActivity extends Activity {
         ((Button) findViewById(R.id.action_location)).setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 String uri = "geo:"+ a.locationLat + "," + a.locationLong;
+                Log.i(TAG, "Running geo application, uri: " + uri);
                 startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
             }
         });

@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.provider.ActionProvider;
+import cz.hackathon.programy.provider.ProviderFactory;
 
 /**
  * User: lukas.marek@cleverlance.com
@@ -34,7 +35,7 @@ public class ListActionActivity extends Activity {
 
         ListView list = (ListView) findViewById(R.id.list);
 		
-		ActionProvider provider = ((FestivalyApplication)getApplication()).provider;
+		ActionProvider provider = ProviderFactory.getProvider(this);
 		
 
         list.setAdapter(new ActionAdapter(provider.getAvailableActions(), this));

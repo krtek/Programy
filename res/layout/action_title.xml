@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Titulka akce -->
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-    <TextView android:layout_height="wrap_content" android:text="Sázava Fest" android:layout_alignParentTop="true"
-              android:id="@+id/action_name" android:layout_width="fill_parent" android:textSize="30dip"></TextView>
-    <ImageView android:layout_width="150dip" android:id="@+id/imageView1" android:src="@drawable/icon" android:layout_height="150dip" android:layout_below="@+id/action_name" android:layout_alignLeft="@+id/action_name" android:layout_alignRight="@+id/action_name"></ImageView>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Velmi dlouhé description akce. Opravdu velmi dlouhé." android:id="@+id/action_description" android:layout_below="@+id/imageView1" android:layout_alignLeft="@+id/imageView1" android:layout_alignRight="@+id/imageView1"></TextView>
-    <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content"
-                  android:layout_below="@+id/action_description" android:layout_alignLeft="@+id/imageView1"
-                  android:layout_alignRight="@+id/action_description" android:layout_width="fill_parent"
-                  android:orientation="vertical">
-        <TextView android:layout_width="wrap_content" android:text="URL" android:id="@+id/action_url"
-                  android:layout_height="wrap_content"></TextView>
-        <Button android:layout_width="wrap_content" android:text="Mapka" android:id="@+id/action_location"
-                  android:layout_height="wrap_content"></Button>
-    </LinearLayout>
-</RelativeLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent"
+		        android:layout_height="fill_parent">
+    <ScrollView android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/scrollView1">
+		<RelativeLayout       
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent">
+		    <TextView android:layout_height="wrap_content" android:text="Sázava Fest" android:layout_alignParentTop="true"
+		              android:id="@+id/action_name" android:layout_width="fill_parent" android:textSize="30dip"></TextView>
+		    <ImageView android:layout_width="150dip" android:id="@+id/imageView1" android:src="@drawable/icon" android:layout_height="150dip" android:layout_below="@+id/action_name" android:layout_alignLeft="@+id/action_name" android:layout_alignRight="@+id/action_name"></ImageView>
+		    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Velmi dlouhé description akce. Opravdu velmi dlouhé." android:id="@+id/action_description" android:layout_below="@+id/imageView1" android:layout_alignLeft="@+id/imageView1" android:layout_alignRight="@+id/imageView1"></TextView>
+		    <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content"
+		                  android:layout_below="@+id/action_description" android:layout_alignLeft="@+id/imageView1"
+		                  android:layout_alignRight="@+id/action_description" android:layout_width="fill_parent"
+		                  android:orientation="vertical">
+		        <TextView android:layout_width="wrap_content" android:text="URL" android:id="@+id/action_url"
+		                  android:layout_height="wrap_content"></TextView>
+		        <Button android:layout_width="wrap_content" android:text="Mapka" android:id="@+id/action_location"
+		                  android:layout_height="wrap_content"></Button>
+		    </LinearLayout>
+		</RelativeLayout>
+	</ScrollView>
+</LinearLayout>

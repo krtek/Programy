@@ -45,8 +45,19 @@ public class XmlActionProvider implements ActionProvider {
 		DomParser parser = new DomParser(path);
 		List<Action> actions = parser.parse();
 		
+		List<Action> available = getAvailableActions();
+		
 		for (Action action : actions) {
-			odb.store(action);
+			boolean found = false;
+			for (Action availableAction : available) {
+				if (!availableAction.name.equals(action.name) || !availableAction.id.equals(action.id)) {
+					found = true;
+					break;
+				}
+			}
+			if (!found) {
+				odb.store(action);
+			}
 		}
 	}
 

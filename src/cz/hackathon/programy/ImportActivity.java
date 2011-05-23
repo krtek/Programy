@@ -19,7 +19,7 @@ import cz.hackathon.programy.provider.ProviderFactory;
  * 
  */
 public class ImportActivity extends Activity implements OnCancelListener {
-	private final static String TAG = "Programy|ImportActivity";
+	private final static String TAG = "Festacky|ImportActivity";
 	private Handler  handler;
 	private ImportThread importThread;
 	private ProgressDialog progressDialog;
