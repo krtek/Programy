@@ -1,7 +1,6 @@
 package cz.hackathon.programy.provider;
 
 import android.app.Activity;
-import android.content.Context;
 import cz.hackathon.programy.FestivalyApplication;
 
 /**
@@ -12,6 +11,6 @@ import cz.hackathon.programy.FestivalyApplication;
 public class ProviderFactory {
 
     public static ActionProvider getProvider(Activity context) {
-        return ((FestivalyApplication)(context.getApplication())).provider;
+        return ((FestivalyApplication)(context.getApplicationContext())).provider;
     }
 }
