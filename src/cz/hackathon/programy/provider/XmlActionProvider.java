@@ -5,7 +5,6 @@ import java.util.List;
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.Objects;
 import org.neodatis.odb.core.query.IQuery;
-import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 
 import cz.hackathon.programy.DomParser;
@@ -18,14 +17,12 @@ public class XmlActionProvider implements ActionProvider {
 	
 	public ODB odb;
 	
-	@Override
 	public List<Action> getAvailableActions() {
         IQuery query = new CriteriaQuery(Action.class);
 		Objects<Action> actions = odb.getObjects(query);
 		return (List<Action>) actions;
 	}
 
-	@Override
 	public Action getAction(int actionId) {
         IQuery query = new CriteriaQuery(Action.class);
         Objects<Action> actions = odb.getObjects(query);
@@ -39,13 +36,11 @@ public class XmlActionProvider implements ActionProvider {
         return null;
 	}
 
-	@Override
 	public Stage getStages(int actionId, int stageId) {
         Action a = getAction(actionId);
         return a.stages.get(stageId);
 	}
 
-	@Override
 	public void addXml(String path) {
 		DomParser parser = new DomParser(path);
 		List<Action> actions = parser.parse();
