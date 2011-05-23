@@ -9,4 +9,5 @@ Použití
 2. Sejmi oblíbeným nástrojem přiložený QR - aplikace by se měla sama otevřít.
 
 ![QR](http://programy.arcao.com/festival3.png "QR kód")
+
 3. Voilá - otevřel se program Sázava Festu.
