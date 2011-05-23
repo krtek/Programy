@@ -16,7 +16,6 @@ import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.dto.Stage;
 import cz.hackathon.programy.dto.StageEvent;
 
-
 public class DomParser extends BaseFeedParser {
 	
 	final static String ACTIONS = "actions";
@@ -36,7 +35,6 @@ public class DomParser extends BaseFeedParser {
 	final static String FROM = "FROM";
 	final static String TO = "to";
 	
-
     public DomParser(String feedUrl) {
         super(feedUrl);
     }
@@ -48,6 +46,7 @@ public class DomParser extends BaseFeedParser {
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document dom = builder.parse(this.getInputStream());
             org.w3c.dom.Element root = dom.getDocumentElement();
+            
             NodeList items = root.getElementsByTagName(ACTION);
             for (int i=0;i<items.getLength();i++){
                 Action action = new Action();
@@ -110,8 +109,6 @@ public class DomParser extends BaseFeedParser {
                             }
                             action.stages.add(stage);
                         }
-
-                    	
                     }
                 }
                 actions.add(action);
@@ -119,6 +116,6 @@ public class DomParser extends BaseFeedParser {
         } catch (Exception e) {
             throw new RuntimeException(e);
         } 
-        return actions;
-    }
+		return actions;
+	}
 }
