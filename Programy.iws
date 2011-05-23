@@ -6,10 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c5673ce-35e5-4d12-8270-c0de1d2069ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/DomParser.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/DomParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/FestTabActivity.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/FestTabActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/FestivalyApplication.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/FestivalyApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/hackathon/programy/StageActivity.java" afterPath="$PROJECT_DIR$/src/cz/hackathon/programy/StageActivity.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programy.iws" afterPath="$PROJECT_DIR$/Programy.iws" />
     </list>
     <ignored path="Programy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,7 +80,7 @@
       <file leaf-file-name="ProviderFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/provider/ProviderFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="75" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+            <state line="13" column="75" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FestTabActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FestTabActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/FestTabActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="23" selection-start="673" selection-end="673" vertical-scroll-proportion="-1.0858369">
+            <state line="45" column="18" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StageActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="StageActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/StageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0">
+            <state line="28" column="39" selection-start="874" selection-end="874" vertical-scroll-proportion="0.49545455">
               <folding />
             </state>
           </provider>
@@ -140,7 +138,7 @@
       <file leaf-file-name="ImportActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/ImportActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="49" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.0">
+            <state line="31" column="49" selection-start="990" selection-end="990" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,7 +156,7 @@
       <file leaf-file-name="XmlActionProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/provider/XmlActionProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
+            <state line="38" column="0" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,12 +188,12 @@
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/ImportActivity.java" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/provider/XmlActionProvider.java" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/provider/ProviderFactory.java" />
-        <option value="$PROJECT_DIR$/src/cz/hackathon/programy/StageActivity.java" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/ActionActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/FestivalyApplication.java" />
         <option value="$PROJECT_DIR$/src/cz/hackathon/programy/FestTabActivity.java" />
+        <option value="$PROJECT_DIR$/src/cz/hackathon/programy/StageActivity.java" />
       </list>
     </option>
   </component>
@@ -681,7 +679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/provider/ProviderFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="75" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+        <state line="13" column="75" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -690,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/ImportActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="49" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.0">
+        <state line="31" column="49" selection-start="990" selection-end="990" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -722,17 +720,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/provider/XmlActionProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
+        <state line="38" column="0" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/StageActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,7 +743,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/FestTabActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="23" selection-start="673" selection-end="673" vertical-scroll-proportion="-1.0858369">
+        <state line="45" column="18" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cz/hackathon/programy/StageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="39" selection-start="874" selection-end="874" vertical-scroll-proportion="0.49545455">
           <folding />
         </state>
       </provider>
