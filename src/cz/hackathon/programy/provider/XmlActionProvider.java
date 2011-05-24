@@ -77,13 +77,13 @@ public class XmlActionProvider implements ActionProvider {
 			actions = readActions();
 		}
 		DomParser parser = new DomParser(path);
-		List<Action> actions = parser.parse();
+		List<Action> newActions = parser.parse();
 
 		List<Action> available = getAvailableActions();
 
 		odbProvider.open();
 		try {
-			for (Action action : actions) {
+			for (Action action : newActions) {
 				boolean found = false;
 				for (Action availableAction : available) {
 					if (availableAction.name.equals(action.name)
