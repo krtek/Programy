@@ -106,4 +106,10 @@ public class FakeProvider implements ActionProvider {
 	public void addXml(String path) {
 		Log.d("FakeProvider", "Going to fetch:" + path);
 	}
+
+	@Override
+	public void removeAction(int actionId) {
+		// TODO Auto-generated method stub
+		
+	}
 }

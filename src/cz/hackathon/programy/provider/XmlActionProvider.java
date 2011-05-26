@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.neodatis.odb.Objects;
 import org.neodatis.odb.core.query.IQuery;
+import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 
 import cz.hackathon.programy.DomParser;
@@ -16,9 +17,8 @@ public class XmlActionProvider implements ActionProvider {
 	private List<Action> actions = null;
 
 	public OdbProvider odbProvider;
-	
-	
-	private List<Action> readActions () {
+
+	private List<Action> readActions() {
 		IQuery query = new CriteriaQuery(Action.class);
 		Objects<Action> actions = null;
 		odbProvider.open();
@@ -41,30 +41,19 @@ public class XmlActionProvider implements ActionProvider {
 		if (actions == null) {
 			actions = readActions();
 		}
-		
+
 		return actions.get(actionId);
-		
+
 		/*
-		// IQuery query = new CriteriaQuery(Action.class, Where.equal("id",
-		// actionId));
-		
-		IQuery query = new CriteriaQuery(Action.class);
-		Objects<Action> actions = null;
-		odbProvider.open();
-		try {
-			actions = odbProvider.getOdb().getObjects(query);
-			int i = 0;
-			for (Action a : actions) {
-				if (i == actionId) {
-					return a;
-				}
-				i++;
-			}
-		} finally {
-			odbProvider.close();
-		}
-		return null;
-		*/
+		 * // IQuery query = new CriteriaQuery(Action.class, Where.equal("id",
+		 * // actionId));
+		 * 
+		 * IQuery query = new CriteriaQuery(Action.class); Objects<Action>
+		 * actions = null; odbProvider.open(); try { actions =
+		 * odbProvider.getOdb().getObjects(query); int i = 0; for (Action a :
+		 * actions) { if (i == actionId) { return a; } i++; } } finally {
+		 * odbProvider.close(); } return null;
+		 */
 	}
 
 	public Stage getStages(int actionId, int stageId) {
@@ -94,11 +83,32 @@ public class XmlActionProvider implements ActionProvider {
 				}
 				if (!found) {
 					odbProvider.getOdb().store(action);
-					if (actions != null) actions.add(action);
+					if (actions != null)
+						actions.add(action);
 				}
 			}
 		} finally {
 			odbProvider.close();
+		}
+	}
+
+	@Override
+	public void removeAction(int actionId) {
+
+		Action action = getAction(actionId);
+		if (action != null) {
+			odbProvider.open();
+			try {
+				IQuery query = new CriteriaQuery(Action.class, Where.equal(
+						"name", action.name));
+				Objects<Action> actions = odbProvider.getOdb()
+						.getObjects(query);
+				if (actions != null) {
+					odbProvider.getOdb().delete(actions.getFirst());
+				}
+			} finally {
+				odbProvider.close();
+			}
 		}
 	}
 
