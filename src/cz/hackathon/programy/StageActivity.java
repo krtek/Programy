@@ -98,7 +98,7 @@ public class StageActivity extends ListActivity {
 		StageEvent event = list.get(((AdapterContextMenuInfo)menuInfo).position);
 		if (event != null) {
 			menu.add(Menu.NONE, ADD_NOTIFICATION, 0,
-					"Pridat upozorneni na " + event.name).setIcon(
+					String.format(getString(R.string.add_notice), event.name)).setIcon(
 					android.R.drawable.ic_dialog_alert);
 		}
 		// menu.add(Menu.NONE, PREFS_MENU, 1,
@@ -111,7 +111,7 @@ public class StageActivity extends ListActivity {
 		if (ADD_NOTIFICATION==item.getItemId()) {			
 			StageEvent event = list.get(((AdapterContextMenuInfo) item.getMenuInfo()).position);
 			if (event != null) {
-				Toast.makeText(this, "Upozorneni na " + event.name, 5000).show();
+				Toast.makeText(this, String.format(getString(R.string.info_notice), event.name), 5000).show();
 			}
 		}
 		return true;

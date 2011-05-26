@@ -72,7 +72,7 @@ public class ListActionActivity extends Activity {
 					.getAction(((AdapterContextMenuInfo) menuInfo).position);
 			if (action != null) {
 				menu.add(Menu.NONE, DEL_ACTION, 0,
-						"Odstranit " + action.name).setIcon(
+						String.format(getString(R.string.remove_action), action.name)).setIcon(
 						android.R.drawable.ic_input_delete);
 			}
 		}

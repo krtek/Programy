@@ -3,4 +3,8 @@
     <string name="hello">Hello World, Festivals!</string>
     <string name="app_name">Fesťáčky</string>
     <string name="import_message">Stahuji program...</string>
+    <string name="btn_location">Mapka</string>
+    <string name="add_notice">Přidat upozornění na %s </string>
+    <string name="info_notice">Upozorneni na %s</string>
+    <string name="remove_action">Odstranit %s </string>   
 </resources>
