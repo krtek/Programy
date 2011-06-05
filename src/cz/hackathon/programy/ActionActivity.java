@@ -3,6 +3,8 @@ package cz.hackathon.programy;
 import java.io.IOException;
 import java.io.InputStream;
 
+import android.os.Handler;
+import cz.hackathon.programy.utils.ImageLoader;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -29,6 +31,7 @@ import cz.hackathon.programy.provider.ProviderFactory;
  */
 public class ActionActivity extends Activity {
 	private final static String TAG = "Festacky|ActionActivity";
+    private Handler handler = new Handler();
 
         /** Called when the activity is first created. */
     @Override
@@ -55,20 +58,13 @@ public class ActionActivity extends Activity {
             }
         });
         if (a.imageUrl != null) {
-            HttpClient httpClient = new DefaultHttpClient();
-            Log.d(ActionActivity.class.getName(), "Loading image from: " + a.imageUrl);
-            HttpGet httpGet = new HttpGet(a.imageUrl);
-            HttpResponse response = null;
-            try {
-                response = httpClient.execute(httpGet);
-                InputStream content = response.getEntity().getContent();
-                Drawable d = Drawable.createFromStream(content, "src");
-                ((ImageView) findViewById(R.id.imageView1)).setImageDrawable(d);
-                content.close();
-                httpGet.abort();
-            } catch (IOException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
+            final ImageView logo = (ImageView)findViewById(R.id.imageView1);
+            new Thread(new Runnable() {
+                public void run() {
+                    ImageLoader.getInstance().loadImage(a.imageUrl, logo, handler);
+                }
+            }).start();
+
         }
 
     }
