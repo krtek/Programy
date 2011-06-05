@@ -59,12 +59,7 @@ public class ActionActivity extends Activity {
         });
         if (a.imageUrl != null) {
             final ImageView logo = (ImageView)findViewById(R.id.imageView1);
-            new Thread(new Runnable() {
-                public void run() {
-                    ImageLoader.getInstance().loadImage(a.imageUrl, logo, handler);
-                }
-            }).start();
-
+            ImageLoader.getInstance().loadImage(a.imageUrl, logo, handler);
         }
 
     }

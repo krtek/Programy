@@ -35,7 +35,22 @@ public class ImageLoader {
         return instance;
     }
 
-    public void loadImage(String imageUrl, final ImageView view, Handler handler) {
+    /**
+     * Loads image in background thread.
+     * @param imageUrl
+     * @param view
+     * @param handler
+     */
+    public void loadImage(final String imageUrl, final ImageView view, final Handler handler) {
+        new Thread(new Runnable() {
+            public void run() {
+                loadImageInForeground(imageUrl, view, handler);
+            }
+        }).start();
+
+    }
+
+    private void loadImageInForeground(String imageUrl, final ImageView view, Handler handler) {
         Drawable d;
         if ((d = cache.get(imageUrl)) == null) {
             d = loadImageFromRemote(imageUrl);
