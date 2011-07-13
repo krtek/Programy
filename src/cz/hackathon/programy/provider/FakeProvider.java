@@ -112,4 +112,10 @@ public class FakeProvider implements ActionProvider {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public List<StageEvent> getFollowingEvents(int actionId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

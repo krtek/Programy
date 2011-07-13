@@ -1,9 +1,11 @@
 package cz.hackathon.programy.provider;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.dto.Stage;
+import cz.hackathon.programy.dto.StageEvent;
 
 /**
  * User: lukas.marek@cleverlance.com
@@ -20,6 +22,7 @@ public interface ActionProvider {
     public List<Action> getAvailableActions();
     public Action getAction(int actionId);
     public Stage getStages(int actionId, int stageId);
+    public List<StageEvent> getFollowingEvents (int actionId);
     public void removeAction(int actionId);
     public void addXml(String path);
 }

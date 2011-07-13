@@ -17,8 +17,9 @@
 
   		<activity android:name="StageActivity" android:configChanges="keyboardHidden|orientation"/>
         <activity android:name="FestTabActivity" android:configChanges="keyboardHidden|orientation"/>
-        <activity android:name="ActionActivity" android:configChanges="keyboardHidden|orientation">
-        </activity>
+        <activity android:name="ActionActivity" android:configChanges="keyboardHidden|orientation"/>
+        <activity android:name="FollowEventsActivity" android:configChanges="keyboardHidden|orientation"/>
+        
   		<activity android:name="ImportActivity" android:configChanges="keyboardHidden|orientation">
   			<intent-filter>
             	<action android:name="android.intent.action.VIEW" />
@@ -26,6 +27,14 @@
       			<category android:name="android.intent.category.BROWSABLE" />
       			<data android:host="programy.arcao.com" android:scheme="http" android:pathPrefix="/akce/"  />
     		</intent-filter>
+    		
+    		<intent-filter>
+            	<action android:name="android.intent.action.VIEW" />
+      			<category android:name="android.intent.category.DEFAULT" />
+      			<category android:name="android.intent.category.BROWSABLE" />
+      			<data android:host="foto-kouba.cz" android:scheme="http" android:pathPrefix="/program/"  />
+    		</intent-filter>
+    		
   		</activity>
     </application>
 </manifest>

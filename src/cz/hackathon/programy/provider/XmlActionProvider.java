@@ -1,5 +1,8 @@
 package cz.hackathon.programy.provider;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import org.neodatis.odb.Objects;
@@ -11,6 +14,8 @@ import cz.hackathon.programy.DomParser;
 import cz.hackathon.programy.db.OdbProvider;
 import cz.hackathon.programy.dto.Action;
 import cz.hackathon.programy.dto.Stage;
+import cz.hackathon.programy.dto.StageEvent;
+import cz.hackathon.programy.utils.HoursComparator;
 
 public class XmlActionProvider implements ActionProvider {
 
@@ -110,6 +115,31 @@ public class XmlActionProvider implements ActionProvider {
 				odbProvider.close();
 			}
 		}
+	}
+
+	@Override
+	public List<StageEvent> getFollowingEvents(int actionId) {
+		List<StageEvent> followingEvents = new ArrayList<StageEvent>();
+		Action action = getAction(actionId);
+		if (action != null) {
+			
+			Date curDateTime = new Date();
+			int actual_hour = curDateTime.getHours();
+			
+			for (Stage stage : action.stages) {
+				for (StageEvent stageEvent : stage.events) {
+					if (stageEvent.from != null) {
+						String hour_str = stageEvent.from.substring(0, 2);
+						int hour = Integer.parseInt(hour_str); 
+						if (hour >= actual_hour) {
+							followingEvents.add(stageEvent);
+						}
+					}
+				}
+			}
+		}
+		Collections.sort(followingEvents, new HoursComparator());
+		return followingEvents;
 	}
 
 }

@@ -5,7 +5,9 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -30,8 +32,10 @@ import cz.hackathon.programy.provider.ProviderFactory;
  */
 public class ListActionActivity extends Activity {
 
+	private final static String TAG = "Festacky|ListActionActivity";
+
 	protected ActionProvider provider = null;
-	protected ActionAdapter  adapter = null;
+	protected ActionAdapter adapter = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +52,8 @@ public class ListActionActivity extends Activity {
 
 		provider = ProviderFactory.getProvider(this);
 
-		adapter = new ActionAdapter(provider.getAvailableActions(), this); 
-		
+		adapter = new ActionAdapter(provider.getAvailableActions(), this);
+
 		list.setAdapter(adapter);
 		list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			public void onItemClick(AdapterView<?> adapterView, View view,
@@ -63,6 +67,7 @@ public class ListActionActivity extends Activity {
 	}
 
 	private static final int DEL_ACTION = 1;
+	private static final int FOLLOW_EVENTS = 2;
 
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v,
@@ -71,8 +76,21 @@ public class ListActionActivity extends Activity {
 			Action action = provider
 					.getAction(((AdapterContextMenuInfo) menuInfo).position);
 			if (action != null) {
-				menu.add(Menu.NONE, DEL_ACTION, 0,
-						String.format(getString(R.string.remove_action), action.name)).setIcon(
+				
+				menu.add(
+						Menu.NONE,
+						FOLLOW_EVENTS,
+						0,
+						String.format(getString(R.string.follow_events_action),
+								action.name)).setIcon(
+						android.R.drawable.ic_menu_day);
+				
+				menu.add(
+						Menu.NONE,
+						DEL_ACTION,
+						0,
+						String.format(getString(R.string.remove_action),
+								action.name)).setIcon(
 						android.R.drawable.ic_input_delete);
 			}
 		}
@@ -86,8 +104,20 @@ public class ListActionActivity extends Activity {
 		if (DEL_ACTION == item.getItemId()) {
 			int index = ((AdapterContextMenuInfo) item.getMenuInfo()).position;
 			provider.removeAction(index);
-			adapter.remove(index);	
-            adapter.notifyDataSetChanged();
+			adapter.remove(index);
+			adapter.notifyDataSetChanged();
+		}
+
+		if (FOLLOW_EVENTS == item.getItemId()) {
+			int index = ((AdapterContextMenuInfo) item.getMenuInfo()).position;
+			Action action = provider.getAction(index);
+			if (action != null) {
+				Log.i(TAG, "Running follows events: " + action.name);
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setClass(getBaseContext(), FollowEventsActivity.class);
+				intent.putExtra(ActionProvider.ACTION_ID, index);
+				startActivity(intent);
+			}
 		}
 		return true;
 	}
@@ -128,8 +158,8 @@ class ActionAdapter extends BaseAdapter {
 		((TextView) v.findViewById(R.id.action_name)).setText(a.name);
 		return v;
 	}
-	
-	public void remove (int i) {
+
+	public void remove(int i) {
 		this.actions.remove(i);
 	}
 }
